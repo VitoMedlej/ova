@@ -11,7 +11,7 @@ import { useEffect, useState} from 'react';
 
 import SearchModal from './SearchModal';
 import Link from 'next/link';
-import {Badge, Divider, Typography} from '@mui/material';
+import {Badge, Button, Container, Divider, Typography} from '@mui/material';
 // import { loadState } from '../../Utils/LocalstorageFn';
 import {useRouter} from 'next/navigation';
 // import {AiOutlinePhone, AiOutlineSearch, AiOutlineMenu} from 'react-icons/ai'
@@ -26,15 +26,11 @@ import useLanguage from '@/Hooks/useLanguage';
 
 
 
-export const categories =   [
-    'Labneh','Keshek',
-    'Beverages',
-    'Honey, Jams & Spreads',
-    'Mouneh',
-    'Olives & Olive Oil',
-    'Sweets & Nuts',
-    'Zaatar',
-  ]
+export const categories =  [`Craft Supplies`,
+`DIY Kits`,
+`Artistic Creations`,
+`Creative Crafts`,
+`Home Decor`];
 export default function Navbar() {
     const {open, setOpen} = useDrawerContext();
     const [openModal,
@@ -48,7 +44,7 @@ export default function Navbar() {
     // const localCart = [1]
     useEffect(() => {
         const cart : any = []
-        // const cart = loadState('prodNtX932ux') || []
+        // const cart = loadState('2G184N24-JZ094512JIF12412') || []
         if (cart) {
 
             setLocalCart(cart)
@@ -60,13 +56,13 @@ export default function Navbar() {
     return ( <>
      <Box
      id='navy'
-    className='center auto relative   bg flex'
+    className='center auto   absolute   flex'
         sx={{
             zIndex:12,
         flexWrap: 'wrap',
                 width:'100%',
                 boxShadow:'none',
-        background:'white',
+        background:'transparent',
         border: 'none',
         px:0,
         flexGrow: 1
@@ -75,250 +71,71 @@ export default function Navbar() {
         <AppBar
      id='navy2'
 
-    className='center relative  flex'
+    className='center col absolute   flex'
 
             sx={{
 
                 boxShadow:'none',
 
-                background:'white',
+                background:'transparent',
             // maxWidth: 'lg',
                 width:'100%',
             margin: '0 auto',
         }}>
-            {/* <Box className='center text-center' sx={{background:'#0f0f0f',width:'100%',py:.25}}>
-                <Typography className='clr' component='h1' sx={{py:.2,fontSize:{xs:'.75em',sm:'.75em'}}}>
+            <Box className='center text-center bg2' sx={{width:'100%',py:.25}}>
+                <Typography className='' component='h1' sx={{color:'#0f0f0f',px:.5,py:.2,fontSize:{xs:'.65em',sm:'.75em'}}}>
             FREE DELIVERY FOR ORDERS ABOVE $40. CASH ON DELIVERY. USD AT DAILY MARKET RATE.
                 </Typography>
-            </Box> */}
-            <Toolbar
-     id='navy3'
-
-    className='center relative  flex  col w100  auto'
-
-                sx={{
-                
-                background:'white',
-                    maxWidth:'xl',
-                px:'0 !important',
-                mx:{xs:1},
-                flexWrap: 'wrap'
-            }}> 
-            <Box 
-            sx={{
-                justifyContent: {xs:'space-between',md:'center'},
-            }}
-            className='flex wrap items-center w100  '> 
-                  <Link className='flex center  aling-center items-center '  href='/' color='inherit'>
-
-<Box className='flex'
-    sx={{
-    mx: {
-        xs: '.15em',
-        sm: '1em'
-    },
-    my:1,
-    width:{xs:'90px',md: '100px'}
-}}>
-    <img
-        className='img contain'
-        src={`https://ucarecdn.com/9304db51-1509-447d-b8e4-c87d0b8c11c2/408031158_664465732546685_227633461073843326_n.jpg`}
-        alt="Mounet Dalia logo"/>
-</Box>
-
-</Link>
-<Box className='flex'>
-
- <IconButton
-                            onClick={() => setOpen(!open)}
-                            size="large"
-                            edge="start"
-                            aria-label="menu"
-                            sx={{
-                                
-                            margin : '8px',padding:0,
-                            color: 'black',
-                            // margin: '0.1em',
-                            display: {
-                                md: 'none'
-                            }
-                        }}>
-                            <IoIosMenu color='black'/>
-                        </IconButton>
-
-                        <IconButton
-                            onClick={() => setCartOpen(!cartOpen)}
-    className=' gap gap1'
-                            sx={{
-                                display:{xs:'flex',md:' none'},
-                                margin : '8px',
-                                
-                        }}>
-                            {/* <Badge color='primary' badgeContent={`${localCart.length || '0'}`}> */}
-
-                                <CiShoppingCart color='black'/>
-                            {/* </Badge> */}
-                          
-                        </IconButton>
-
-                        </Box>
-                        
-
-<SearchInput/>
-<Btn
-                            onClick={() => setCartOpen(!cartOpen)}
-    className=' gap gap1'
-                            sx={{
-                                display:{xs:'none',md:'flex'},
-                                margin : '8px',
-                                
-                        }}>
-                            {/* <Badge color='primary' badgeContent={`${localCart.length || '0'}`}> */}
-
-                                <CiShoppingCart fontSize={'2em'} color='white'/>
-                            {/* </Badge> */}
-                            <Typography>
-                                $ 0.0 (0)
-                            </Typography>
-                        </Btn>
-</Box>
-
-
-
-
-
-
-
-                <Box
-                    sx={{
-                    px:1,
-                    display:{xs:'flex',md:'none'},
-
-                    flex: 1,
-                    flexWrap: 'wrap',
-                    justifyContent: {
-                        xs: 'right',
-                    },
-                 
-                }}>
- 
-                    <Box
-                        sx={{
-                        display: {
-                            xs: 'flex'
-                        },
-                        // justifyContent: 'end'
-                    }}
-                        className='flex right'>
-                             
-                        
-                             
-                             {/* <Btn
-                            onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
-                            sx={{
-                                margin : '8px',padding:0,
-                            color: 'black',
-
-                            // margin: '0.1em',
-                        }}>
-                            {text('العربية','English')}
-                        </Btn> */}
-                        {/* <IconButton
-                            onClick={() => setOpenModal(!openModal)}
-                            sx={{
-                            color: 'black'
-                        }}>
-
-                                <CiSearch color='black'/>
-                          
-                        </IconButton> */}
-                   
-   
-                   
-   {/* <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`} target='_blank' className='flex decor-none' rel='noopener'>
-
-                        <IconButton
-                            onClick={() => setCartOpen(!cartOpen)}
-                            sx={{
-                            color: 'black'
-                        }}>
-                     
-                            <AiOutlinePhone color='black'/>
-
-                        </IconButton>
-    </a> */}
-                    
-                    </Box>
-
-                </Box>
-
-
-  {/* <SearchInput/> */}
-  {/* <SearchInput
-mobile
-                    />  */}
-
-                <Box
-                    sx={{
-                    px:1,
-                    display:{xs:'none',md:'flex'},
-
-                    // flex: 1,
-                    flexWrap: 'wrap',
-                    // justifyContent: {
-                    //     xs: 'right',
-                    // },
-                 
-                }}>
- 
-                    <Box
-                        sx={{
-                        display: {
-                            xs: 'flex'
-                        },
-                        // justifyContent: 'end'
-                    }}
-                        className='flex right'>
- 
-
-                               {/* <Btn
-                            onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
-                            sx={{
-                                margin : '8px',padding:0,
-                            color: 'black',
-
-                            // margin: '0.1em',
-                        }}>
-                            {text('English','Arabic')}
-                        </Btn> */}
-                       
-
-                    
-
-
-
-                            {/* <IconButton
-                            onClick={() => setOpen(!open)}
-                            edge="start"
-                            aria-label="menu"
-                            sx={{
-                            color: 'black',
-                            // margin: '0.1em',
-                         
-                        }}>
-                            <IoIosMenu color='black'/>
-                        </IconButton> */}
-                    
-                    </Box>
-
-                </Box>
-           
-<SearchModal openModal={openModal} setOpenModal={setOpenModal }/>
-<Divider></Divider>
-
-<NavButtom/>
+            </Box>
+      <Toolbar className='flex relative center items-center' sx={{py:1,px:0,mx:{xs:1},background:'transparent'}}>
+        
+        <Box className='cursor pointer' sx={{
+            position:{xs:'relative',sm:'absolute'},
+            right:{xs:'0%',sm:'50%'},
+        
+        transform:{sm:'translateX(50%)'},width:{xs:'auto',sm:'200px'},height:{xs:'100px',sm:'200px'}}}>
+            <img
+             src="https://ucarecdn.com/d0533aac-5ae0-4ed5-836f-827bb7428c5a/WhatsApp_Image_20240131_at_151932__1_removebg.png"
              
-            </Toolbar>
+             
+             alt="logo" className="img logo" />
+        </Box>
+
+
+
+        <Box  sx={{justifyContent:{xs:'flex-end',sm:'space-between'}}} className="flex w100  flex1 ">
+
+        <Link href='/' className=''  >
+            <Box className='cursor pointer flex center items-center' sx={{width:'20px',padding:1}}>
+                <img style={{filter:'invert(0)'}} src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt="" className="img" />
+            </Box>
+        </Link>
+
+        
+        <Link href='/' className='' style={{padding:' 0 '}}>
+            <Box className='cursor pointer flex center items-center' sx={{width:'20px',padding:1}}>
+                <img style={{filter:'invert(00)'}} src="https://cdn-icons-png.flaticon.com/128/1656/1656850.png" alt="" className="img" />
+            </Box>
+        </Link>
+
+        <Box className='cursor pointer  center items-center' sx={{width:'20px',padding:1,
+                display: {xs:'flex',sm:'none'},
+        }}>
+
+        <Link href='/' className=''  style={{paddingLeft:'0'}}>
+            <Box className='cursor pointer  center items-center' sx={{width:'20px',
+                display: {xs:'flex',sm:'none'},
+            }}>
+                <img style={{filter:'invert(0)'}} src="https://cdn-icons-png.flaticon.com/128/1828/1828859.png" alt="" className="img" />
+            </Box>
+        </Link>
+            </Box>
+        </Box>
+
+        
+      </Toolbar>
+        <NavButtom/>
+
         </AppBar>
     </Box> 
 

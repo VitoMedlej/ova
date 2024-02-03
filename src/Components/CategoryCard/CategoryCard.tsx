@@ -4,7 +4,10 @@ import Btn from '../Btn/Btn';
 
 const CategoryCard = ({ imageUrl, categoryName } : any) => {
   return (
-    <Card sx={{boxShadow:'none',mt:2,mx:1,borderRadius:'4px',border:'none', maxWidth: 345 }}>
+    <Card
+    sx={{boxShadow:'none',
+    width:{xs:'49%',sm:'auto'},
+    mt:2,mx:0,borderRadius:'4px',border:'none', maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="340"
@@ -12,11 +15,11 @@ const CategoryCard = ({ imageUrl, categoryName } : any) => {
         image={imageUrl}
         alt={categoryName}
       />
-      <CardContent sx={{boxShadow:'none',border:'none', borderRadius:'4px',bgcolor: '#f4f4f4' }}>
-        <Typography gutterBottom className='text-' sx={{pb:1,fontWeight:600}} variant="h5" component="div">
+      <CardContent sx={{boxShadow:'none',border:'none', borderRadius:'4px',bgcolor: 'transparent' }}>
+        <Typography component='h1' gutterBottom className='text-center auto' sx={{pb:1,fontWeight:600,fontSize:'1.2em'}} variant="h1" >
           {categoryName}
         </Typography>
-        <Btn sx={{mt:1}}  className='w100'>
+        <Btn  v2 sx={{border:'none',color:'black',textDecoration:'underline',mt:1}}  className='auto'>
           Show More
         </Btn>
       </CardContent>

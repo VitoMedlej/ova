@@ -26,7 +26,7 @@ const ProductCollection = ({sx,delay,Collectiontitle,data,setQuickView} : {
             width :'99%',
             margin: '0 auto',
             // my: '3em',
-            mt:'4em',
+            mt:'2em',
             mb:'3em',
             ...sx,
         }}>
@@ -34,7 +34,7 @@ const ProductCollection = ({sx,delay,Collectiontitle,data,setQuickView} : {
 
             <Typography
             component='h1'
-                className='sectionTitle   box'
+                className='sectionTitle center auto text-center   box'
                 sx={{
              
                 fontSize: {
@@ -42,16 +42,12 @@ const ProductCollection = ({sx,delay,Collectiontitle,data,setQuickView} : {
                     sm: '1.4em'
                 },
                 padding:.5,
-                fontWeight: '300'
+                fontWeight: '900'
             }}>
-              {Collectiontitle}
+             Our Best Sellers
             </Typography>
             
-            <Btn
-            sx={{border:'1px solid #006430'}}
-            onClick={()=>router.push('/collection/products')}>
-                Shop All
-            </Btn>
+          
             </Box>
             
             <Box
@@ -67,6 +63,12 @@ const ProductCollection = ({sx,delay,Collectiontitle,data,setQuickView} : {
                 data={data && data.length > 0 && data?.slice(0,25) || []}/>
             </Box>
 
+            <Btn
+            className='auto'
+            sx={{border:'1px solid #ba6e3e'}}
+            onClick={()=>router.push('/collection/products')}>
+                Shop All
+            </Btn>
    
 {/* <Divider  light /> */}
         

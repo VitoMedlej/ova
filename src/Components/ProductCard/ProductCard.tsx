@@ -21,7 +21,6 @@ const ProductCard = ({
     _id,
     width,
     height,
-    stock,
     inStock
     ,
     newPrice
@@ -30,7 +29,6 @@ const ProductCard = ({
     inStock?:boolean,
     _id: string,
     title: string,
-    stock: number,
     sizes: {
         size: number;
         price: number;
@@ -44,7 +42,6 @@ const ProductCard = ({
 }) => {
     const router = useRouter()
     const {addToCart}= useCart()
-    console.log('sizes: ', stock);
     return (
         <Box
             className='  trans cardproduct center text-center'
@@ -100,7 +97,7 @@ const ProductCard = ({
         
                <Box className='flex col ' sx={{textAlign:'left'}}>
               
-               { stock > 0 && inStock !== false ? 
+               { inStock !== false ? 
                <>
                <Typography
                className="clr2"
@@ -125,7 +122,7 @@ const ProductCard = ({
                         sizes &&  sizes?.length > 0 ? 
                         router.push(`/product/${_id}`)
                         :
-                        Number(stock) >= 1   && 
+                       
                         addToCart(1,_id,{title,category,img:images[0],_id,price:newPrice?Number(newPrice):price},true)}
                     v2
                     sx={{

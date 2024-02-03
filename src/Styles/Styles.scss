@@ -2,12 +2,12 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Flex', sans-serif !important;
+    font-family: 'Avenir', sans-serif !important;
 
 
 }
 * h1,h2,h3,h4,h5,h6 ,p,button,input,select,textarea,a{
-    font-family: 'Roboto Flex', sans-serif !important;
+    font-family: 'Avenir', sans-serif !important;
 }
 .emailinput {
     min-width: 300px;
@@ -23,9 +23,9 @@ body {
 }
  
 
-$color : #286538 !important;
-$color2 : #1d1d1d !important;
-$color3 : #84a545 !important;
+$color : #ba6e3e !important;
+$color2 : #0e0f0a !important;
+$color3 : #e1d4c7 !important;
 .color3 {
     color: $color3;
 }
@@ -145,6 +145,10 @@ button[disabled]{
 .clr {
     color: $color;
 }
+.clr2 {
+    color: $color2;
+
+}
 .auto{
     margin: 0 auto;
 }
@@ -159,7 +163,7 @@ button[disabled]{
 }
 .mySwiper {
     width: 100%;
-    max-height: 600px;
+    max-height: 100%;
 }
 .swiper-wrapper {
     width: 99vw;

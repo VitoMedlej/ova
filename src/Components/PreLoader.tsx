@@ -12,6 +12,7 @@ import Testimonials from './Testimonials/Testimonials'
 import Btn from './Btn/Btn'
 import useLanguage from '@/Hooks/useLanguage'
 import CategoryCard from './CategoryCard/CategoryCard'
+import HomeProductsCarousel from './HomeProductsCarousel/HomeProductsCarousel'
 
 const 
 PreLoader = ({data,resImages}:any) => {
@@ -46,7 +47,7 @@ PreLoader = ({data,resImages}:any) => {
       id: 4,
       title: text('Great Value', 'قيمة عظيمة'),
       desc: text(
-        'Mounet Dalia honey provides great value for your health, offering the highest quality honey at an affordable price for you and your family.',
+        'AMARIA honey provides great value for your health, offering the highest quality honey at an affordable price for you and your family.',
         'عسل بي أورجانيك يقدم قيمة عظيمة لصحتك، حيث يوفر عسل عالي الجودة بسعر معقول لك ولعائلتك.'
       ),
     },
@@ -55,53 +56,87 @@ PreLoader = ({data,resImages}:any) => {
 
   return (
     <Box >
-      <MainCarousel resImages={resImages}/>
-      <HomeProductCollection  products={data}/>
-      <Grid className=' center items-center ' container sx={{background:'#006231',height:{md:'600px'},minHeight:{xs:'500px'}}}>
+      <MainCarousel res={undefined} />
+      <Grid className='center auto' sx={{px:{xs:1,sm:0},py:{xs:8},maxWidth:'lg'}}>
+        <Typography 
+                                className=''
+                                
+                                sx={{
+                                 maxWidth:'600px',
+                                  
+                                  color:'black',fontSize:{xs:'1.2em',
+                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
+                             
+                             Our approach
+                                </Typography>
+                                <Typography 
+                                className=' '
+                                sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
+                               We personalize and elaborate a skincare routine for every individual. To maintain a healthy and glowing skin, we recommend you a three-step layering routine with products adapted to your skin type or concern.
 
-        <Grid sx={{py:{xs:8,sm:0},px:{xs:1,sm:4}}} xs={12} className='' sm={6}>
-            <Typography sx={{pb:1,color:'white',fontWeight:900,fontSize:{xs:'2em',sm:'3em',md:'3.2em'}}}>
-              About Our Products
-            </Typography>
-            <Typography className='' sx={{color:'#d8d8d8',fontSize:'.85em',lineHeight:'1.75em'}}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat inventore officiis nulla culpa neque non sint. Fugiat explicabo autem excepturi expedita dolorum porro sequi omnis qui quo error quae commodi ullam, esse nisi id ea, reprehenderit sunt beatae a iure ut minima illum. Quo eligendi autem ullam itaque at sed!
-            </Typography>
-            <Btn className='bg3 white border3' sx={{mt:2}}>
-              Learn More
-            </Btn>
+                                </Typography>
+                                <Btn sx={{mt:1}}>
+                                  Learn More
+                                </Btn>
         </Grid>
-        <Grid sx={{height:'100%'}}xs={12} sm={6}>
-          <Box sx={{width:'100%',height:'100%'}}>
-            <img src="https://ucarecdn.com/82634fa8-05f1-430d-a158-825d71c9779c/403996132_328527179893172_6812557316622611387_n.jpg" alt="" className="img" />
-          </Box>
-        </Grid>
+    
+      <HomeProductsCarousel  data={data} Collectiontitle={''} delay={0}/>
 
-      </Grid>
+      
 
-      <Container className='flex row wrap ' sx={{
-        justifyContent:{xs:'center',sm:'justify-between'},
+      <Container className='flex col ' sx={{
+        px:0,
         my:{xs:8,sm:12}}} maxWidth='lg'>
 
+<Typography 
+                                className='text-center auto center'
+                                
+                                sx={{
+                                 maxWidth:'600px',
+                                  
+                                  color:'black',fontSize:{xs:'1.2em',
+                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
+                             
+                             Our products are suitable for each skin
+                                </Typography>
+                                <Typography 
+                                className='text-center auto center'
+                                sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
+                           Do you know your skin type? Read more to understand your skin type or contact us for a free consultation with our skin experts.
+
+                                </Typography>
+
+
+                                <Container className='flex row wrap space-between justify-between ' sx={{
+        justifyContent:{xs:'justify-between',sm:'justify-between'},
+        mt:2}} maxWidth='lg'>
+          
       {
         [{
-          img:`https://ucarecdn.com/7fea20d3-484f-40ce-a65a-a647258bf8d5/411045445_747027977349294_1663032584200259792_n.jpg`,
-          title:'Labneh'
+          img:`https://helwe.com/cdn/shop/files/3_36e07bc7-d063-47e6-966b-62d9140e0007_295x.png?v=1662366307`,
+          title:'Dry skin'
         },
         {
-          img:`https://ucarecdn.com/a983b4af-f02f-48bf-92ab-31ca70061d5c/418698985_1752566701907368_3211893865957316752_n.jpg`,
-          title:'Olives & Olive Oil'
+          img:`https://helwe.com/cdn/shop/files/2_c7d2e24e-1a0b-4192-a4d1-01a9f6b928b6_295x.png?v=1662366307`,
+          title:'Combination Skin'
         },
         {
-          img:`https://ucarecdn.com/9d220db7-8eff-4a16-923a-1abd3be4d0d0/413446196_3774316836187782_3031473529925331693_n.jpg`,
-          title:'Keshek'
-        }
+          img:`https://helwe.com/cdn/shop/files/1_c4b8cd92-2c53-40e8-93f7-163d7f7fd928_295x.png?v=1662366307`,
+          title:'Oily Skin'
+        },
+        {img:'https://helwe.com/cdn/shop/files/4_e2a4d56a-01b1-4e11-bd30-4e710dea7dba_295x.png?v=1662366493',
+      title:'Know your skin'}
       ].map(i=>{
         return <CategoryCard key={i} categoryName={i?.title} imageUrl={i?.img}/>
         
       })
     }
+    
     </Container>
-      <Perks/>
+    </Container>
+
+
+ 
 
 
     {/* <Grid  sx={{background:'#f9d40100',alignItems:'center',justifyContent:'center',width:'100%',py:8}} container>
@@ -122,7 +157,7 @@ PreLoader = ({data,resImages}:any) => {
 
         </Typography>
         <Typography sx={{width:'100%',maxWidth:'470px',flex:1,fontSize:{xs:'.8em',sm:'.9em'},fontWeight:300,color:'#4d555e',mt:2}} className='center text-center'>
-        {text('At Mounet Dalia, we’re passionate about health and wellness. We believe in the power of nature, and that’s why we’ve created a range of natural supplements to help you live your best life. From ashwagandha to tongkat ali, we’ve got everything you need to feel your best.', 'في ترو ناشور بليند، نحن ملتزمون بالصحة والعافية. نحن نؤمن بقوة الطبيعة، وهذا هو السبب في أننا قمنا بإنشاء مجموعة من المكملات الطبيعية لمساعدتك على عيش حياتك بأفضل طريقة. من الأشواغاندا إلى تونجكات علي، لدينا كل ما تحتاجه لتشعر بأفضل حال.')}
+        {text('At AMARIA, we’re passionate about health and wellness. We believe in the power of nature, and that’s why we’ve created a range of natural supplements to help you live your best life. From ashwagandha to tongkat ali, we’ve got everything you need to feel your best.', 'في ترو ناشور بليند، نحن ملتزمون بالصحة والعافية. نحن نؤمن بقوة الطبيعة، وهذا هو السبب في أننا قمنا بإنشاء مجموعة من المكملات الطبيعية لمساعدتك على عيش حياتك بأفضل طريقة. من الأشواغاندا إلى تونجكات علي، لدينا كل ما تحتاجه لتشعر بأفضل حال.')}
 
         </Typography>
       
@@ -134,38 +169,7 @@ PreLoader = ({data,resImages}:any) => {
     </Grid> */}
 
 
-    <Box sx={{padding:'0 !important',my:{xs:8,sm:12},height:'500px',overflow:'hidden',maxWidth:'none',
-    
-    width:'100%'}} className='relative flex center items-center'>
-      <Box className="absolute" sx={{width:'100%',height:'100%',top:0,right:0,background:'black',opacity:.45}}></Box>
-      <Box sx={{maxWidth:'lg',px:1}} className="absolute center flex text-center col auto">
-        
-      <Typography component='h1' className='auto clr2 center' sx={{maxWidth:'900px',textTransform:'uppercase',fontSize:{xs:'1em',sm:'1.5em'},fontWeight:'300',color:'white'}}>
-
-      Together We Can Help The
-      </Typography>
-        <Typography component='h1' className='auto center' sx={{maxWidth:'900px',textTransform:'uppercase',fontSize:{xs:'2.5em',sm:'3em'},fontWeight:'600',color:'white'}}>
-        {text('FAMILIES IN NEED', 'رسالتنا')}
-        </Typography>
-        <Typography sx={{fontSize:{xs:'.74em',sm:'.9em'},color:'white',maxWidth:'660px'}} className='center auto'>
-        {text('that values health, wellness, and sustainability. We’re about educating our customers on the importance of bees in our ecosystem and how our consumption choices impact their survival.', 'مهمتنا في ترو ناشور بليند هي تقديم أعلى جودة من المكملات الطبيعية لدعم أهداف الصحة والعافية لعملائنا. نحن ملتزمون بالاستدامة ودعم البيئة، ونؤمن بقوة الطبيعة في مساعدتنا على عيش أفضل حياة.')}
-
-        </Typography>
-        <Btn
-            onClick={()=>router.push(`/collection/products?type=all`)}
-
-                    
-                    sx={{border:'none',mx:'auto',mt:1}}>
-                    {text('Donate Now')}
-
-                    </Btn>
-      </Box>
-      <Box sx={{height:'100%',width:'100%'}}>
-      <img src="https://madebynaturelb.com/wp-content/uploads/2023/08/Group-853.jpg?id=74371" alt="" className="img" />
- 
-      </Box>
-
-      </Box>   
+  
     {/* <Box className='flex auto wrap ' sx={{justifyContent:'space-between',width:'100%',maxWidth:'xl'}}>
       {
         resImages?.categoryImage && resImages?.categoryImage.map((img:any)=>{
@@ -282,7 +286,7 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
         <Box>
         <Typography sx={{width:'100%',maxWidth:'600px',flex:1,fontSize:{xs:'.95em',sm:'1.19em'},fontWeight:300,color:'#4d555e',mt:2}} className=''>
             
-        {text('At Mounet Dalia, we’re committed to sustainability. That’s why we use eco-friendly packaging and support sustainable farming practices to ensure that our products have a minimal impact on the environment.', 'في ترو ناشور بليند، نحن ملتزمون بالاستدامة. لهذا السبب نستخدم تعبئة صديقة للبيئة وندعم ممارسات الزراعة المستدامة لضمان أن منتجاتنا لها تأثير أدنى على البيئة.')}
+        {text('At AMARIA, we’re committed to sustainability. That’s why we use eco-friendly packaging and support sustainable farming practices to ensure that our products have a minimal impact on the environment.', 'في ترو ناشور بليند، نحن ملتزمون بالاستدامة. لهذا السبب نستخدم تعبئة صديقة للبيئة وندعم ممارسات الزراعة المستدامة لضمان أن منتجاتنا لها تأثير أدنى على البيئة.')}
 
             </Typography>
         </Box>
@@ -297,38 +301,10 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
 
      
 
-    {/* <Testimonials/> */}
+    <Testimonials/>
+    {/* <Perks/> */}
 
-        <Grid className='flex  items-center auto' sx={{justifyContent:'space-between'
-      ,py:4,background:'#f6f6f6 !important',
-      }} container>
-        <Container className='flex auto wrap row items-center' sx={{maxWidth:'lg'}}>
-          <Grid   item xs={12} sm={6}>
-            <Typography
-            className='clr'
-            sx={{color:'white',fontSize:'1.5em',fontWeight:600}}>Grab an extra 5% Discount</Typography>
-            <Typography
-            sx={{fontSize:'.8em',color:'#696969'}}
-            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda tenetur et reprehenderit possimus. Et rem sequi eos nesciunt sint debitis? Vel, reiciendis ipsum. Aut, totam.</Typography>
-          </Grid>
-          <Grid sx={{mt:{xs:2,sm:0}}} className="flex center items-center row wrap " item xs={12} sm={6}>
-            <Box className="flex row wrap gap gap1" sx={{height:'40px',maxWidth:'500px'}}>
-
-            <input className='emailinput'  style={{backgroundColor:'white',color:'black',
-           borderRadius:'4px',
-          
-          }}
-            placeholder='Enter Email'
-            type='email' value=''/>
-            <Btn>
-              Submit
-            </Btn>
-            </Box>
-          </Grid>
-          </Container>
-
-        </Grid>
-        {/* <ContactSection/> */}
+    
   </Box>
   )
 }

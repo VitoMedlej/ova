@@ -25,19 +25,19 @@ import useLanguage from '@/Hooks/useLanguage';
 // ]
 const tests = [
   {
-    title: "Discover the Power of Mounet Dalia!",
+    title: "Discover the Power of AMARIA!",
     reviewer: "(Ella, Health Enthusiast)",
-    description: "Mounet Dalia is a true haven for health and wellness enthusiasts like myself. Their premium selection of natural supplements is a game-changer. From the revitalizing effects of ashwagandha to the vitality boost of tongkat ali, they have it all. I've experienced a remarkable improvement in my overall well-being since I started incorporating their products into my daily routine. Mounet Dalia is my go-to destination for all my health and wellness needs!",
+    description: "AMARIA is a true haven for health and wellness enthusiasts like myself. Their premium selection of natural supplements is a game-changer. From the revitalizing effects of ashwagandha to the vitality boost of tongkat ali, they have it all. I've experienced a remarkable improvement in my overall well-being since I started incorporating their products into my daily routine. AMARIA is my go-to destination for all my health and wellness needs!",
   },
   {
-    title: "A Wellness Oasis with Mounet Dalia!",
+    title: "A Wellness Oasis with AMARIA!",
     reviewer: "(Oliver, Fitness Fanatic)",
-    description: "When it comes to my fitness journey, Mounet Dalia has been a true ally. Their range of natural supplements, including cordyceps and lion's mane mushroom, has been a game-changer in my routine. The quality of their products is unparalleled, and I've seen significant improvements in my energy levels and mental clarity. Mounet Dalia is my one-stop-shop for all things related to health and wellness. I can't recommend them enough!",
+    description: "When it comes to my fitness journey, AMARIA has been a true ally. Their range of natural supplements, including cordyceps and lion's mane mushroom, has been a game-changer in my routine. The quality of their products is unparalleled, and I've seen significant improvements in my energy levels and mental clarity. AMARIA is my one-stop-shop for all things related to health and wellness. I can't recommend them enough!",
   },
   {
-    title: "Mounet Dalia: Your Path to Optimal Health!",
+    title: "AMARIA: Your Path to Optimal Health!",
     reviewer: "(Ava, Wellness Advocate)",
-    description: "As a wellness advocate, I'm always on the lookout for high-quality supplements, and Mounet Dalia has exceeded my expectations. Their comprehensive range of natural products, including ashwagandha, tongkat ali, cordyceps mushroom, and more, is a testament to their commitment to well-being. Whether you're a health enthusiast or someone looking to enhance their overall health, Mounet Dalia is the answer. Trust me; you won't be disappointed!",
+    description: "As a wellness advocate, I'm always on the lookout for high-quality supplements, and AMARIA has exceeded my expectations. Their comprehensive range of natural products, including ashwagandha, tongkat ali, cordyceps mushroom, and more, is a testament to their commitment to well-being. Whether you're a health enthusiast or someone looking to enhance their overall health, AMARIA is the answer. Trust me; you won't be disappointed!",
   },
 ];
 
@@ -50,21 +50,16 @@ const Testimonial = () => {
     
   return (
     <Box className=' flex col ' sx={{width:'100%',height:'100%'}}>
- <Box className='flex col'  sx={{flex:1,width:'100%',pt:'6em'}}>
- <Typography
-                className='sectionTitle  text-center auto center box'
-                sx={{
-                  pb:'.5em',
-                  pt:4,
-                  width:'100%',
-                  display:'flex',
-                  fontSize: {
-                    xs: '1.62em',
-                    sm: '2em',md:'2.5em'
-                },
-                flex:1,
-                fontWeight: '500'
-            }}>
+ <Box className='flex col'  sx={{flex:1,width:'100%',pt:'0em'}}>
+
+ <Typography 
+                                className='text-center auto center'
+                                
+                                sx={{
+                                 maxWidth:'600px',
+                                  
+                                  color:'black',fontSize:{xs:'1.2em',
+                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
               {text('Our Customers speak for us', 'عملاؤنا يتحدثون عنا')}
 
             </Typography>

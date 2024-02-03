@@ -13,11 +13,11 @@ export async function GET(req : NextRequest, res : NextApiResponse) {
     // const {category} = ctx.params;
     const category = searchParams.get('category')
     const type = searchParams.get('type')
+    const subCategory = searchParams.get('subcategory')
+    const subCategory2 = searchParams.get('subCategory')
+    
     const search = searchParams.get('search')
     const page = searchParams.get('page')
-    
-    console.log('search: ', search);
-
     // const {page} = ctx?.searchParams;
     // const {type} = ctx?.searchParams;
     const pageSize = 12; // Number of items per page
@@ -38,30 +38,54 @@ export async function GET(req : NextRequest, res : NextApiResponse) {
         // let page=  searchParams.get('page') || 0
     
         
-        let filterByCate = !category || category === 'collection' || category === 'category' ? null : `${category}`.replace(/-/g, ' ').toLocaleLowerCase()
-        let filterByType = !type || type === null || type == 'null'  ? null : decodeURIComponent(type).toLocaleLowerCase()
-        let filterBySearch = search  && search != 'null' && search != null && search?.length > 1; 
+        // let filterBySubcate = !type || !subCategory || subCategory == 'null'  ? null : `${decodeURIComponent(subCategory)}`.replace(/-/g, ' ').toLocaleLowerCase()
+        let filterByCate = !category || 
+        category?.toLocaleLowerCase() == 'all' || 
+        category === 'collection'  || 
+        category == 'null' || category === 'category' ? null : `${decodeURIComponent(category)}`.replace(/-/g, ' ').toLocaleLowerCase()
+        let filterByType = !type || type === null || type == 'null' || 
+        type?.toLocaleLowerCase() == 'all' || type == 'all' || type == 'collection'  ? null : `${decodeURIComponent(type)}`.toLocaleLowerCase()
+        let filterBySearch = !search || search?.length < 1 ? null : `${search}`; 
         
     const ProductsCollection = await client
-        .db("DALIA")
+        .db("AMARIA")
         .collection("Products");
     let products : any = []
     
     
-
+  
     
     const filterQuery = () => {
-    
-      if (filterBySearch) {
+      
+      if (filterBySearch !== null && filterBySearch != 'null') {
         return {
       $or: [
           { title: { $regex: search, $options: 'i' } },
-          { category: { $regex: search, $options: 'i' } },
           // { description: { $regex: search, $options: 'i' } },
+          { category: { $regex: search, $options: 'i' } },
+          { type: { $regex: search, $options: 'i' } },
+          // { subCategory: { $regex: search, $options: 'i' } },
       ]
     } 
   }
-  
+  // if (filterByCate && filterByType && filterBySubcate) {
+  //   return { category: {
+  //     $regex: new RegExp(
+  //         `^${filterByCate?.toLocaleLowerCase().replace(/-/g, ' ')}$`,
+  //         'i'
+  //       ),
+  //     },
+  //     subCategory : { $regex: new RegExp(
+  //       `^${filterBySubcate?.toLocaleLowerCase().replace(/-/g, ' ')}$`,
+  //       'i'
+  //     )},
+  //     type : {
+  //       $regex: new RegExp(
+  //         `^${filterByType?.toLocaleLowerCase().replace(/-/g, ' ')}$`,
+  //         'i'
+  //       ),
+  //     }}
+  //     } 
   if (filterByCate && filterByType) {
     return { category: {
       $regex: new RegExp(
@@ -71,7 +95,8 @@ export async function GET(req : NextRequest, res : NextApiResponse) {
       },
       type : {
         $regex: new RegExp(
-          `^${filterByType?.toLocaleLowerCase().replace(/-/g, ' ')}$`,
+          // `^${filterByType?.toLocaleLowerCase().replace(/-/g, ' ')}$`,
+          `^${filterByType?.toLocaleLowerCase()}$`,
           'i'
         ),
       }}
@@ -85,12 +110,21 @@ export async function GET(req : NextRequest, res : NextApiResponse) {
               ),
       }}
     }
+    if (filterByType) {
+      return  {
+        type: {
+          $regex: new RegExp(
+            `^${filterByType?.toLocaleLowerCase()}$`,
+            'i'
+            ),
+    }}
+  }
     else {
         return {}
       }
     }
     const countQuery = await ProductsCollection.count(filterQuery());
-    console.log('filterQuery: ', filterQuery());
+    console.log('filterQuery(): ', filterQuery());
     
     const totalPages = Number(Math.ceil(countQuery / pageSize)); // Total number of pages
     const skip = Number(page) * 12
@@ -106,6 +140,7 @@ export async function GET(req : NextRequest, res : NextApiResponse) {
         products.push(doc)
         
       });
+      console.log('products: ', products?.length);
     if (!products || products?.length < 1  ) {
       throw 'ERROR: Could not find any products'
     }

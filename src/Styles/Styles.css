@@ -2,11 +2,11 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto Flex", sans-serif !important;
+  font-family: "Avenir", sans-serif !important;
 }
 
 * h1, h2, h3, h4, h5, h6, p, button, input, select, textarea, a {
-  font-family: "Roboto Flex", sans-serif !important;
+  font-family: "Avenir", sans-serif !important;
 }
 
 .emailinput {
@@ -23,7 +23,7 @@ body {
 }
 
 .color3 {
-  color: #84a545 !important;
+  color: #e1d4c7 !important;
 }
 
 .topd {
@@ -48,15 +48,15 @@ body {
 }
 
 .bg2 {
-  background: #84a545 !important;
+  background: #e1d4c7 !important;
 }
 
 .borderColor {
-  border-color: #286538 !important;
+  border-color: #ba6e3e !important;
 }
 
 .borderColor2 {
-  border-color: #1d1d1d !important;
+  border-color: #0e0f0a !important;
 }
 
 .rounded {
@@ -64,11 +64,11 @@ body {
 }
 
 .color2 {
-  color: #1d1d1d !important;
+  color: #0e0f0a !important;
 }
 
 .color {
-  color: #286538 !important;
+  color: #ba6e3e !important;
 }
 
 .flex {
@@ -108,15 +108,15 @@ body {
 }
 
 .bg {
-  background: #286538 !important;
+  background: #ba6e3e !important;
 }
 
 .bg3 {
-  background: #1d1d1d !important;
+  background: #0e0f0a !important;
 }
 
 .border3 {
-  border-color: #1d1d1d !important;
+  border-color: #0e0f0a !important;
 }
 
 .white {
@@ -169,7 +169,11 @@ button[disabled] {
 }
 
 .clr {
-  color: #286538 !important;
+  color: #ba6e3e !important;
+}
+
+.clr2 {
+  color: #0e0f0a !important;
 }
 
 .auto {
@@ -190,7 +194,7 @@ button[disabled] {
 
 .mySwiper {
   width: 100%;
-  max-height: 600px;
+  max-height: 100%;
 }
 
 .swiper-wrapper {

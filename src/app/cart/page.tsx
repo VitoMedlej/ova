@@ -87,7 +87,7 @@ const Cart = () => {
     return (
         <Box sx={{
             pb: 5,
-            pt:6,
+            mt:{xs:'9em',md:'11em'},
             maxWidth:'xl',
             margin:'0 auto',
             px: 1

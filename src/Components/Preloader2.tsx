@@ -106,53 +106,41 @@ const Preloader2 = ({data,totalPages}:any) => {
     //   })
     
   return (
-    <Container sx={{mt:2}} disableGutters maxWidth='lg'>
-    <Box sx={{mb:2,width:'100%',py:2,background:'#f6f6f6'}}>
-        <Typography sx={{fontSize:{xs:'2em',sm:'3em'},fontWeight:700}} className='flex clr center  text-center' component='h1'>
-            {category}
-        </Typography>
-    </Box>
-
-    <Box className='flex row wrap'>
-
+    <Container sx={{mt:{xs:'9em',md:'11em'}}} disableGutters maxWidth='lg'>
     <Box
     className='flex  items-center wrap'
         sx={{
         mb:4,
-        mx:{xs:1,md:0},
-    width: {xs:'100%',md:'30%',lg:'25%'},
-        minHeight: '100px',height:'fit-content',
+        width: '100%',
+        minHeight: '100px'
     }}>
         <FilterBar handleSubmit={handleSubmit} setNewValue={setnewValue} newValue={newValue}/>
     <FilterSection handleSubmit={handleSubmit} options={options} setOptions={setOptions} setProducts={setProducts}/>
     </Box>
-   
+    {/* <BreadCrumb></BreadCrumb> */}
    
 
-    <Box className='flex wrap col' sx={{
-        width:{xs:'100%',sm:'70%',lg:'75%'},
-        px: {xs:1,md:0}
+    <Box className='flex wrap' sx={{
+        px: 1
     }}>
         {products && products?.length > 0 ? products.map((i:IProduct) => {
             return <ProductCard
-            sizes={i?.sizes || null}
-            width={{xs:'45%',sm:'32%'}}
-            key={i?._id}
-            stock={i.stock}
-
-            inStock={i?.inStock 
-            }
+                width={{ xs: '45%', sm: '32%' }}
+                key={i?._id}
+                inStock={i?.inStock}
                 _id={i._id}
                 title={i.title}
-                newPrice={i?.newPrice}
                 price={i.price}
                 images={i.images}
-                category={i.category}/>
+                category={i.category}
+
+                sizes={null} />
         })
-: <Typography className='center text-center auto' >
-    We Could Not Find Products That Match Your Criteria!
+: <Typography>
+No products found, try a different category...
 </Typography>}
-<Pagination
+    </Box>
+    <Pagination
         onChange={(e, val) => {
             fetchData(val)
     }}
@@ -163,10 +151,8 @@ const Preloader2 = ({data,totalPages}:any) => {
         ? totalPages
         : 1}
         className='flex center '/>
-    </Box>
 
 
-</Box>
 </Container>
   )
 }

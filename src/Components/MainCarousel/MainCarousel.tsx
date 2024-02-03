@@ -7,60 +7,36 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useRouter } from 'next/navigation';
 import { Autoplay } from 'swiper';
+
 import useLanguage from '@/Hooks/useLanguage';
+import Btn from '../Btn/Btn';
 
 
 
-const Preloader3 = () => {
-    // const fetchDataAndSetImgs = async () => {
-    //     try {
-    //       const response = await fetch('https://api.jsonbin.io/v3/b/65b919d41f5677401f28610e', {
-    //         method: 'GET',
-    //         headers: {
-    //           'Content-Type': 'application/json',
-    //           'X-Master-Key': '$2a$10$iAUMdzZeDAI2qTW61Uz6UuE/S8Bgs4LfVuZxwByPpocU4CuR7Nzo2'
-    //         }
-    //       });
-      
-    //       if (!response?.ok) {
-    //         throw new Error(`Failed to fetch data. Status: ${response?.status}`);
-    //       }
-      
-    //       const data = await response.json();
-    //       setImgs(data?.record); // Assuming 'record' is the property containing the images in the response
-    //       console.log('Data fetched and set to setImgs:', setImgs);
-    //     } catch (error) {
-    //       console.error('Error fetching data:', error);
-    //     }
-    //   };
-      
-    // useEffect(() => {
-      
-    
-    //    fetchDataAndSetImgs()
-    // }, [])
-      
-    
+const Preloader3 = ({res}:{res:any}) => {
     const router = useRouter()
-
     const [imgs,setImgs] = useState([
-        {img:'https://th.bing.com/th/id/R.7e46a87cc4b15fdbf0ba6e2c5c34f4bb?rik=OXGkoIf%2bI9kOLQ&riu=http%3a%2f%2fwww.alahlamsy.com%2fpicture%2fClipboard55.jpg&ehk=fOyHQknprh2tIYV%2f8VRFs63V9SiOETAdRejjPzEikTY%3d&risl=&pid=ImgRaw&r=0'},
-        {img:'https://th.bing.com/th/id/R.8b01cb2dc0b885c8d5188e7ba9d2c4f1?rik=%2bYskn20HBuuadA&riu=http%3a%2f%2fwww.alahlamsy.com%2fpicture%2fClipboard44.jpg&ehk=qhCnyIBa2NFEu5wvsjf%2fJCKx12RWeFvesfLzbBNcVn4%3d&risl=&pid=ImgRaw&r=0',position:'centerd'},
-      
-       
+        {
+            img : 'https://helwe.com/cdn/shop/files/HELWE1125_1500x.jpg?v=1694639701',
+            position:'top',
+        },
+      {
+        img: 'https://helwe.com/cdn/shop/files/1_e0850903-aa85-4de4-b1bb-760310fd7813_1200x.png?v=1688387749',
+        position:'',
+    }
      ])
      const redir = () => {
-        router.push('/collection/products')
+        router.push('/services')
         // console.log('abc')
      }
-    // useEffect(() => {
-    //     console.log('res: ', res);
-    // if (res && res?.MainCarousel && res?.MainCarousel?.length > 0) {
-    //     console.log('res?.MainCarousel: ', res?.MainCarousel);
-    //     // console.log('res: ', );
-    //     setImgs(res?.MainCarousel)
-    // }
-    // }, [])
+    useEffect(() => {
+        console.log('res: ', res);
+    if (res && res?.MainCarousel && res?.MainCarousel?.length > 0) {
+        console.log('res?.MainCarousel: ', res?.MainCarousel);
+        // console.log('res: ', );
+        setImgs(res?.MainCarousel)
+    }
+    }, [])
   const {text} = useLanguage()
     
     return (
@@ -69,13 +45,14 @@ const Preloader3 = () => {
             // py: {xs:'.75em',sm:'2em',md:'3em'},
             // width: {xs:'98%',md:'74%',lg:'80%'},
             width:'100%',
+            transform:'translateY(-1px)',
             maxWidth:'none',
             // maxWidth: 'lg',
-            minHeight:'300px',
-            maxHeight:{sm:'90vh',md:'500px',lg:'550px'},
+            minHeight:{xs:'400px',sm:'500px',lg:'600px'},
+            maxHeight:{sm:'100%',md:'600px',lg:'100vh'},
             margin: '0 auto',
-            // mt:1,
-            // height : {xs:'500px',sm:'450px',md:'100%'},
+         
+            height : {xs:'500px',sm:'600px',md:'100vh'},
              
             display: {
                 xs: 'flex'
@@ -89,7 +66,7 @@ const Preloader3 = () => {
                 spaceBetween={0}
                 loop={true}
                 autoplay={{
-                delay: 3000,
+                delay: 4000,
                 disableOnInteraction: true
             }}
                 modules={[Autoplay]}
@@ -106,52 +83,67 @@ const Preloader3 = () => {
                                 height: '100%',
                             width:'100%'
                         }}>
-                        {/* <Container className='auto' sx={{width:'100%'}} maxWidth='lg' disableGutters>
-                            
-                      
-                            <Box sx={{pointerEvents:'none',top:0,right:0,width:'100%',zIndex:1123,height:'100%',background:'black',opacity:.43}} className="absolute">
+                        <Container className='   absolute ' 
+                        
+                        
+                        sx={{
+                            background: '#ffffffed',
 
-                            </Box>
+                            right:{xs:'',lg:'50%'},
+                            top:{xs:'50%',md:'60%'},
+                        }} maxWidth='sm' disableGutters>
+                            
                             <Box 
-                            className='auto'
+                            className='  '
                             sx={{
                                 top:'50%',
-                                px:{xs:4,sm:5,md:6},
-                                maxWidth:'650px',
+                                background: '#ffffffed',
+                                width:{xs:'auto',sm:'400px',md:'450px'},
+                                // maxWidth:'850px',
+                                mx: {xs:1},
+                                px:3,
+                                py:3,
+                                borderRadius:'8px',
                                 transform:'translateY(-50%)',
                                 zIndex:123456,
                                 position:'absolute'}}>
                                 <Typography 
-                                component='h1'
-                                sx={{color:'white',fontSize:{xs:'2.65em',sm:'3.1em',md:'3.15em',lg:'3em'},
-                                textTransform:'capitalize',
-                                fontWeight:900}}>
-                                {text('THE TASTE OF PURE AUTHENTIC HONEY WITH BEE ORGNAIC', 'استشعر قوة الطبيعة')}
+                                className=''
+                                
+                                sx={{
+                                 maxWidth:'600px',
+                                  
+                                  color:'black',fontSize:{xs:'1.2em',
+                                sm:'1.2em',md:'1.165em',lg:'1.5em'},fontWeight:'900'}}>
+                             
+                             WHERE EXCELLENCE MEETS AUTOMOTIVE CARE
                                 </Typography>
                                 <Typography 
-                                sx={{color:'white',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'700px'}}>
-                                {text('Join the BeeOrganic family today and get a 10% discount on your first purchase!', 'مرحبًا بك في ترو ناشور بليند، متجرك الشامل لجميع احتياجات صحتك وعافيتك. اكتشف تشكيلتنا الرائعة من المكملات الطبيعية الفاخرة، بما في ذلك الأشواغاندا، وتونجكات علي، وفطر كورديسيبس، وفطر رأس الأسد، والمزيد.')}
+                                className=' '
+                                sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'600px'}}>
+                                  We take pride in providing the best-in-class services to keep your vehicle in pristine condition.
 
                                 </Typography>
-                                <Box className="flex">
+                                <Box className="flex ">
 
                                 <Btn
                                 onClick={()=>redir()}
                                 
-                                className='bg  borderColor' sx={{mt:3}}>
-                                {text('Shop Now', 'تسوق الآن')}
+                                className='   ' sx={{mx:'0',mt:1}}>
+                             View Services
 
                                 </Btn>
-                          
+                            
                                 </Box>
                             </Box>
-                            </Container> */}
+                            </Container>
                             <img
             
-                                className={`img cover  ${item?.position} 
-                                `}
+                                className={`img   
+                                
+                                ${item?.position}d`}
                                 // ${item?.className}
-                                src={`${item.img}`}
+                                src={`${item.img} `}
                                 alt="Main Carousel Image"/>
            
                         </Box>
