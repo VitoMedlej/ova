@@ -75,7 +75,7 @@ const Index = () => {
   return (
      
     
-      <Box sx={{mt:4}}>
+      <Box sx={{mt:{xs:8,sm:14}}}>
  
 {!loading && data?.product !== undefined && data?.product?.title ?  <Grid sx={{maxWidth:'lg',mx:1,pt:{sm:15,md:15,lg:9}}} className='auto' container>
        <Grid  item xs={12}  md={7} >

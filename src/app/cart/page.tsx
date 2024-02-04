@@ -66,7 +66,7 @@ const Cart = () => {
     const [cartItems,setCartItems] = useState<ICartItem[]>([])
     const total= totalCal(cartItems) || 0; 
     const {discountedPrice,isFirstOrder} = useDiscount(total)
-    let localCart : ICartItem[] = loadState('prodNtX932ux') || []
+    let localCart : ICartItem[] = loadState('prodNtX932ux2') || []
     useEffect(() => {
         if (localCart) {
             
@@ -76,12 +76,12 @@ const Cart = () => {
     }, [])
     const refetchState = () => {
 
-        setCartItems(loadState('prodNtX932ux'))
+        setCartItems(loadState('prodNtX932ux2'))
         
     }
     const remove = (id:string) => {
         let state = cartItems.filter(x => `${x._id}` !== id);
-         saveState('prodNtX932ux', state);
+         saveState('prodNtX932ux2', state);
          setCartItems(state);
      }
     return (

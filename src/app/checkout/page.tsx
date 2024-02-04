@@ -61,7 +61,7 @@ export default function Checkout() {
     const handleNext = () => {
       if (info?.checkbox2 && info?.checkbox && info && info.email && info.firstName && info.lastName && info.address1 && info.phone) {
         localStorage.setItem('5JO1IOX2JIO61V',JSON.stringify({...info, name : `${info.firstName} ${info.lastName}`}))
-        saveState('Niozhh1io42',info)
+        saveState('Niozhh1io422',info)
         setActiveStep(activeStep + 1);
       
       } 
@@ -75,7 +75,7 @@ export default function Checkout() {
 
 
     const saveOrder = async () => {
-      const products = loadState('prodNtX932ux')
+      const products = loadState('prodNtX932ux2')
  
 
       const total = 10
@@ -91,8 +91,8 @@ export default function Checkout() {
             body: JSON.stringify({order:{info,products,total}})
         });
   const content = await rawResponse.json();
-  saveState('prodNtX932ux',null)
-  saveState('Niozhh1io42',null)
+  saveState('prodNtX932ux2',null)
+  saveState('Niozhh1io422',null)
   localStorage.setItem('isFirstOrder', 'false');
 }
   }
