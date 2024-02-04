@@ -93,7 +93,9 @@ export default function Navbar() {
             </Box>
       <Toolbar className='flex relative center items-center' sx={{py:1,px:0,mx:{xs:1},background:'transparent'}}>
         
-        <Box className='cursor pointer' sx={{
+        <Box
+        onClick={()=>router.push('/')}
+        className='cursor pointer' sx={{
             position:{xs:'relative',sm:'absolute'},
             right:{xs:'0%',sm:'50%'},
         

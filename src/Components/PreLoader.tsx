@@ -137,8 +137,8 @@ PreLoader = ({data,resImages}:any) => {
 
       <Grid container sx={{maxWidth:'lg',mx:'auto'}}>
         <Grid className='flex items-center' item xs={12} md={5}>
-            <Box className=' col flex items-center' sx={{
-              background:'#eef6f9 ',
+            <Box className='bg2 col flex items-center' sx={{
+            
              px:{xs:1,sm:4},py:4,
               borderRadius:'4px',
               transform:{md:'translateX(25%)'},
@@ -147,7 +147,7 @@ PreLoader = ({data,resImages}:any) => {
 component={'h1'}
     className='sectionTitle   text-center box'
     sx={{
- 
+      color:'#ba6e3e',
     fontSize: {
         xs: '2em',
         sm: '3em'
@@ -188,8 +188,8 @@ Unleash the power of nature with Amarias hair care set. Experience the transform
         </Grid>
         
         <Grid className='flex items-center' item xs={12} md={5}>
-            <Box className=' col flex items-center' sx={{
-              background:'#eef6f9 ',
+            <Box className=' col bg2 flex items-center' sx={{
+            
              px:{xs:1,sm:4},py:4,
               borderRadius:'4px',
               transform:{md:'translateX(-25%)'},
