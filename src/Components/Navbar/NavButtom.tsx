@@ -52,16 +52,7 @@ COLLECTION
 
 
 {
-   [
-    'Labneh','Keshek',
-    'Beverages',
-    'Honey, Jams & Spreads',
-    'Mouneh',
-    'Olives & Olive Oil',
-    
-    'Sweets & Nuts',
-    'Zaatar',
-  ].map(i=>{
+   ['body care', 'facial care', 'lip care', 'hair care', 'home care'].map(i=>{
         return <Link key={i} className='black decor-none ' href={`/${i.toLocaleLowerCase()}/products`}>
 
         <Typography 

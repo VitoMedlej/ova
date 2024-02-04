@@ -65,7 +65,7 @@ const ProductCollection = ({sx,delay,Collectiontitle,data,setQuickView} : {
 
             <Btn
             className='auto'
-            sx={{border:'1px solid #ba6e3e'}}
+            sx={{background:'none'}}
             onClick={()=>router.push('/collection/products')}>
                 Shop All
             </Btn>

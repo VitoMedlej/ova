@@ -8,8 +8,8 @@ import QuickCart from '@/Components/Shared/QuickCart/QuickCart'
 import ContextWrapper from '@/context/Contexts'
 
 export const metadata = {
-    title: 'AMARIA - Traditional Lebanese Food Stand',
-    description: `Explore the rich flavors of Lebanon at AMARIA. Our food stand crafts tradition with a modern twist, empowering women through flavor transformations. Indulge in creamy labneh, premium olives, and more.`,
+    title: 'Amaria: Natural, Organic, and Handmade Beauty Essentials - Body, Hair, Lip, and Facial Care',
+    description: `where beauty meets nature. Explore our exquisite range of natural, organic, and handmade skin treats, meticulously crafted by licensed dietitians, aromatherapists, and herbalists. Wholesale and retail options available. Elevate your self-care routine with our Body, Hair, Lip, and Facial Care lines.`,
     icons: {
         icon: `https://ucarecdn.com/d0533aac-5ae0-4ed5-836f-827bb7428c5a/WhatsApp_Image_20240131_at_151932__1_removebg.png`
     }

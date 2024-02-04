@@ -30,6 +30,7 @@ export default function SearchInput({sx,mobile,handleSubmit,newValue}:{newValue?
       sx={{
         py:'.25em',
         mx:2,
+        width:'fit-content !important',
         // my:'.25em',
         mb: {xs:1,sm:0},
         px:'.5em',

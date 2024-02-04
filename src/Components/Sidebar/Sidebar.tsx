@@ -14,6 +14,7 @@ import SMicons from '../SMicons/SMicons';
 import { categories } from '../Navbar/Navbar';
 import Btn from '../Btn/Btn';
 import Link from 'next/link';
+import NestedMenuAccordion from './NestedAccordion';
 
 
 export default function TemporaryDrawer({cates}:{cates:string[] | undefined}) {
@@ -84,15 +85,15 @@ useEffect(()=>{
             <ListItemButton>
             
                   <Typography component='h1' sx={{fontWeight:600}}>
-              VIEW ALL
+              All Products
             </Typography>
             </ListItemButton>
   
 
           </ListItem>
        
-    
-          {
+      <NestedMenuAccordion/>
+          {/* {
             [
               'Labneh','Keshek',
               'Beverages',
@@ -119,7 +120,7 @@ useEffect(()=>{
     
               </ListItem>
              })
-          }
+          } */}
 {/* 
 <Accordion sx={{border:'none',boxShadow:'none',}}>
             

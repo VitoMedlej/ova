@@ -93,7 +93,7 @@ PreLoader = ({data,resImages}:any) => {
                                 
                                 sx={{
                                  maxWidth:'600px',
-                                  
+                                    px:1,
                                   color:'black',fontSize:{xs:'1.2em',
                                 sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
                              

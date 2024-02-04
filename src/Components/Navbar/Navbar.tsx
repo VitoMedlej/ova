@@ -9,20 +9,22 @@ import {IoIosMenu} from 'react-icons/io'
 
 import { useEffect, useState} from 'react';
 
-import SearchModal from './SearchModal';
+// import SearchModal from './SearchModal';
 import Link from 'next/link';
 import {Badge, Button, Container, Divider, Typography} from '@mui/material';
 // import { loadState } from '../../Utils/LocalstorageFn';
 import {useRouter} from 'next/navigation';
 // import {AiOutlinePhone, AiOutlineSearch, AiOutlineMenu} from 'react-icons/ai'
-import {CiSearch,CiShoppingCart} from 'react-icons/ci'
-import {AiOutlineHome,AiOutlineShoppingCart} from 'react-icons/ai'
-import SearchInput from './SearchInput';
+// import {CiSearch,CiShoppingCart} from 'react-icons/ci'
+// import {AiOutlineHome,AiOutlineShoppingCart} from 'react-icons/ai'
+// import SearchInput from './SearchInput';
 
 import NavButtom from './NavButtom';
 import { useCartContext, useDrawerContext, useLangContext } from '@/context/Contexts';
 import Btn from '../Btn/Btn';
 import useLanguage from '@/Hooks/useLanguage';
+import SearchInput from './SearchInput';
+import SearchModal from './SearchModal';
 
 
 
@@ -35,11 +37,12 @@ export default function Navbar() {
     const {open, setOpen} = useDrawerContext();
     const [openModal,
         setOpenModal] = useState(false);
-    
+        
     const [localCart,
         setLocalCart] = useState([]);
 
     const {cartOpen, setCartOpen} = useCartContext();
+
     const router = useRouter()
     // const localCart = [1]
     useEffect(() => {
@@ -50,9 +53,7 @@ export default function Navbar() {
             setLocalCart(cart)
         }
     }, [cartOpen])
-    const {text} = useLanguage()
 
-    const {lang,setLang} = useLangContext()
     return ( <>
      <Box
      id='navy'
@@ -105,34 +106,44 @@ export default function Navbar() {
 
         <Box  sx={{justifyContent:{xs:'flex-end',sm:'space-between'}}} className="flex w100  flex1 ">
 
-        <Link href='/' className=''  >
-            <Box className='cursor pointer flex center items-center' sx={{width:'20px',padding:1}}>
+      
+            <Box
+              onClick={()=>setOpenModal(!openModal)}
+            
+            className='cursor pointer flex center items-center' sx={{width:'20px',padding:1}}>
                 <img style={{filter:'invert(0)'}} src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt="" className="img" />
             </Box>
-        </Link>
+      
 
         
-        <Link href='/' className='' style={{padding:' 0 '}}>
-            <Box className='cursor pointer flex center items-center' sx={{width:'20px',padding:1}}>
+      
+            <Box 
+            onClick={()=>setCartOpen(!cartOpen)}
+            
+            
+            className='cursor pointer flex center items-center' sx={{width:'20px',padding:1}}>
                 <img style={{filter:'invert(00)'}} src="https://cdn-icons-png.flaticon.com/128/1656/1656850.png" alt="" className="img" />
             </Box>
-        </Link>
+        
 
         <Box className='cursor pointer  center items-center' sx={{width:'20px',padding:1,
                 display: {xs:'flex',sm:'none'},
         }}>
 
-        <Link href='/' className=''  style={{paddingLeft:'0'}}>
-            <Box className='cursor pointer  center items-center' sx={{width:'20px',
+        {/* <Link href='/' className='menu-icon'  style={{paddingLeft:'0'}}> */}
+            <Box 
+            onClick={()=>setOpen(!open)}
+            className='cursor pointer  center items-center' sx={{width:'20px',
                 display: {xs:'flex',sm:'none'},
             }}>
                 <img style={{filter:'invert(0)'}} src="https://cdn-icons-png.flaticon.com/128/1828/1828859.png" alt="" className="img" />
             </Box>
-        </Link>
+        {/* </Link> */}
             </Box>
         </Box>
 
         
+        <SearchModal openModal={openModal} setOpenModal={setOpenModal }/>
       </Toolbar>
         <NavButtom/>
 

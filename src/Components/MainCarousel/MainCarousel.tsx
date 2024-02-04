@@ -90,7 +90,7 @@ const Preloader3 = ({res}:{res:any}) => {
                             background: '#ffffffed',
 
                             right:{xs:'',lg:'50%'},
-                            top:{xs:'50%',md:'60%'},
+                            top:{xs:'60%',md:'60%'},
                         }} maxWidth='sm' disableGutters>
                             
                             <Box 

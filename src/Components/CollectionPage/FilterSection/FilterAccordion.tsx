@@ -12,6 +12,7 @@ import SelectOneForm from './Forms/SelectOneForm';
 import { Box, MenuItem } from '@mui/material';
 import Btn from '@/Components/Btn/Btn';
 import { categories } from '@/Components/Navbar/Navbar';
+import { getCategorySubcategories, mainCategories } from '@/Components/Sidebar/NestedAccordion';
 // import SearchInput from '@/Components/Navbar/SearchInput';
 
 export default function SimpleAccordion({handleSubmit,options,setOptions}:any) {
@@ -49,12 +50,7 @@ export default function SimpleAccordion({handleSubmit,options,setOptions}:any) {
              title= 'Category'
             List={
             
-               [
-                'All',
-                `mushrooms`,
-                `organic herbs`,
-                `natural supplements`
-      ]
+                mainCategories
              
            }
             value={options.category}
@@ -68,56 +64,7 @@ export default function SimpleAccordion({handleSubmit,options,setOptions}:any) {
             sx={{maxWidth:'250px'}}
             title= 'Type'
            List={
-             options?.category?.toLocaleLowerCase() === 'all' ?
-              [
-               'All',
-       `Lions Mane`,
-     `MACA`,
-
-     `Bacopa Monnieri`,
-     `Passion Flower`,
-     `GABA`,
-     `Taurine`,
-     `L arginine`,
-     `L Lysine`,
-
-   
-'Cordyceps','Tongkat-ali','Ashwagandha'
-     ]
-     :
-     options?.category?.toLocaleLowerCase() === 'mushrooms' ?
-     [
-        'All',
-`Lions Mane`,
-
-
-'Cordyceps'
-]
-:
- options?.category?.toLocaleLowerCase() === 'organic herbs' ?
-[
-    'All',
-    'shilajit',
-    `Milk thistle`, `Sea moss`  ,`Yohimbe bark` ,'Water pill' , `Multi vitamins`,
-
-`MACA`,
-`Bacopa Monnieri`,
-`Passion Flower`,
-'Tongkat-ali','Ashwagandha'
-]
-:
- options?.category?.toLocaleLowerCase() === 'natural supplements' ? 
-[
-    'All',
-     `GABA`,
-     `Taurine`,
-     `L arginine`,
-     `L Lysine`,
-
-   
-]:
-
-[]
+            getCategorySubcategories(`${options?.category?.toLocaleLowerCase()}`)
           }
            value={options?.type}
            setValue={
@@ -174,10 +121,10 @@ className='flex  center items-center'
                  
               
             })}
-               <Btn sx={{px:0,color:'green',py:0,':hover':{background:'none'},border:'none'}} onClick={()=>handleSubmit()}>
+               <Btn sx={{background:'none',px:0,color:'green',py:0,':hover':{background:'none'},border:'none'}} onClick={()=>handleSubmit()}>
                         Search
                     </Btn>
-                    <Btn sx={{px:0,py:0,border:'none',color:'red',':hover':{background:'none'}}}  onClick={()=>handleSubmit(true)}>
+                    <Btn sx={{background:'none',px:0,py:0,border:'none',color:'red',':hover':{background:'none'}}}  onClick={()=>handleSubmit(true)}>
                         Reset
                     </Btn>
         </Box>
