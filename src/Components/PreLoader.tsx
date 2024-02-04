@@ -135,7 +135,100 @@ PreLoader = ({data,resImages}:any) => {
     </Container>
     </Container>
 
+      <Grid container sx={{maxWidth:'lg',mx:'auto'}}>
+        <Grid className='flex items-center' item xs={12} md={5}>
+            <Box className=' col flex items-center' sx={{
+              background:'#eef6f9 ',
+             px:{xs:1,sm:4},py:4,
+              borderRadius:'4px',
+              transform:{md:'translateX(25%)'},
+           }}>
+            <Typography
+component={'h1'}
+    className='sectionTitle   text-center box'
+    sx={{
+ 
+    fontSize: {
+        xs: '2em',
+        sm: '3em'
+    },
+    padding:.5,
+    fontWeight: '900'
+}}>
+ Revitalize Your Hair with Amaria
+</Typography>
+<Typography
+component={'p'}
+    className='sectionTitle   text-center box'
+    sx={{
+ 
+    fontSize: {
+        xs: '.8em',
+        sm: '1em'
+    },
+    padding:.5,
+    fontWeight: '300'
+}}>
+Unleash the power of nature with Amarias hair care set. Experience the transformation today!
+</Typography>
+            </Box>
+        </Grid>
+        <Grid item xs={12} md={7}>
+          <Box className='auto' sx={{width:'95%',height:'100%'}}>
+            <img style={{borderRadius:'4px'}} src="https://ucarecdn.com/b40a6c28-337e-4ee3-b675-87eb94bbb9cf/413040906_17962573337695373_7471455854767187837_n.jpg" alt="" className="img" />
+          </Box>
+        </Grid>
+      </Grid>
 
+      <Grid container sx={{my:{xs:6,sm:12},maxWidth:'lg',mx:'auto'}}>
+      <Grid item xs={12} md={7}>
+          <Box className='auto' sx={{width:'95%',height:'100%'}}>
+            <img style={{borderRadius:'4px'}} src="https://instagram.fbey22-1.fna.fbcdn.net/v/t39.30808-6/399151310_17953961009695373_8676238376226840435_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NDAuc2RyIn0&_nc_ht=instagram.fbey22-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=Qp_yd9rwR20AX9axQFh&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=MzIyOTQ1OTA1MjQ5NTA0NTQ4NA%3D%3D.2-ccb7-5&oh=00_AfACKGhDXDDdui-fZ6lXfGPQhpSvo0Sv16ukVJaD6TYZZg&oe=65C34E47&_nc_sid=b41fef" alt="" className="img" />
+          </Box>
+        </Grid>
+        
+        <Grid className='flex items-center' item xs={12} md={5}>
+            <Box className=' col flex items-center' sx={{
+              background:'#eef6f9 ',
+             px:{xs:1,sm:4},py:4,
+              borderRadius:'4px',
+              transform:{md:'translateX(-25%)'},
+           }}>
+            <Typography
+component={'h1'}
+    className='sectionTitle   text-center box'
+    sx={{
+ 
+    fontSize: {
+        xs: '2em',
+        sm: '3em'
+    },
+    padding:.5,
+    fontWeight: '900'
+}}>
+ Nourish and Glow Your Hair
+</Typography>
+<Typography
+component={'p'}
+    className='sectionTitle   text-center box'
+    sx={{
+ 
+    fontSize: {
+        xs: '.8em',
+        sm: '1em'
+    },
+    padding:.5,
+    fontWeight: '300'
+}}>
+Feed your hair the nutrition it craves. Our hair serum provides the perfect nourishment for lustrous growth
+</Typography>
+            </Box>
+        </Grid>
+     
+      </Grid>
+
+
+    
  
 
 
@@ -302,7 +395,6 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
      
 
     <Testimonials/>
-    {/* <Perks/> */}
 
     
   </Box>
