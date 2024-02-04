@@ -60,6 +60,8 @@ export default function Navbar() {
     className='center auto   absolute   flex'
         sx={{
             zIndex:12,
+            position:'absolute !important',
+
         flexWrap: 'wrap',
                 width:'100%',
                 boxShadow:'none',
@@ -75,6 +77,7 @@ export default function Navbar() {
     className='center col absolute   flex'
 
             sx={{
+                position:'absolute !important',
 
                 boxShadow:'none',
 
