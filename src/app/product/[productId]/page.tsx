@@ -89,7 +89,7 @@ const Index = () => {
              <Typography component={'h1'} sx={{fontWeight:400,pt:1,fontSize:{xs:'2em',sm:'2.25sem',md:'3em'}}}>
               {data?.product?.title || 'Loading Product Details'}
              </Typography>
-           { Number(data?.product?.stock) > 0 && data?.product?.inStock !== false ? <Typography className='green' component={'h1'} sx={{fontSize:'1.25em',fontWeight:300}}>
+           { data?.product?.inStock !== false ? <Typography className='green' component={'h1'} sx={{fontSize:'1.25em',fontWeight:300}}>
                In Stock ({Number(data?.product?.stock)})
              </Typography>
             : 
@@ -97,7 +97,7 @@ const Index = () => {
                Out of stock
              </Typography>
             }
-          { Number(data?.product?.stock) > 0 && data?.product?.inStock !== false &&   <Typography 
+          { data?.product?.inStock !== false &&   <Typography 
                  component={'h1'} sx={{my:.25,fontWeight:500,color:'green',fontSize:{xs:'1em',sm:'1.55em'}}}>
                  ${
                  selectedSize?.price ||

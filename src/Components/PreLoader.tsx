@@ -147,7 +147,6 @@ PreLoader = ({data,resImages}:any) => {
 component={'h1'}
     className='sectionTitle   text-center box'
     sx={{
-      color:'#ba6e3e',
     fontSize: {
         xs: '2em',
         sm: '3em'
