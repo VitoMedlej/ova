@@ -90,7 +90,7 @@ const Index = () => {
               {data?.product?.title || 'Loading Product Details'}
              </Typography>
            { data?.product?.inStock !== false ? <Typography className='green' component={'h1'} sx={{fontSize:'1.25em',fontWeight:300}}>
-               In Stock ({Number(data?.product?.stock)})
+               In Stock 
              </Typography>
             : 
             <Typography className='red' component={'h1'} sx={{color:'red',fontSize:'1.25em',fontWeight:300}}>
@@ -109,7 +109,7 @@ const Index = () => {
    
       
          
-            { Number(data?.product?.stock)> 0 &&data?.product?.inStock !== false ? <Box className='flex wrap ' sx={{my:2,position:'relative'}}>
+            { data?.product?.inStock !== false ? <Box className='flex wrap ' sx={{my:2,position:'relative'}}>
               <Box sx={{width:{xs:'max-content'}}}>
 
              <QuantityPicker 
@@ -126,7 +126,7 @@ const Index = () => {
      
              <Btn 
                      onClick={()=>
-                      data?.product?.stock >= selectedQuantity   && 
+                      // data?.product?.stock >= selectedQuantity   && 
                       addToCart(selectedQuantity,`${data?.product?._id}`,{title : data.product.title ,category: data.product.category,img:data.product.images[0], _id : data.product._id,price:selectedSize?.price ? selectedSize?.price : data?.product?.price, productselectedSize:selectedSize?.size,productselectedPrice:selectedSize?.price},true,true)}
              
               sx={{gap:.5,
