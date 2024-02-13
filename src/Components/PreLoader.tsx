@@ -182,7 +182,7 @@ Unleash the power of nature with Amarias hair care set. Experience the transform
       <Grid container sx={{my:{xs:6,sm:12},maxWidth:'lg',mx:'auto'}}>
       <Grid item xs={12} md={7}>
           <Box className='auto' sx={{width:'95%',height:'100%'}}>
-            <img style={{borderRadius:'4px'}} src="https://instagram.fbey22-1.fna.fbcdn.net/v/t39.30808-6/399151310_17953961009695373_8676238376226840435_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NDAuc2RyIn0&_nc_ht=instagram.fbey22-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=Qp_yd9rwR20AX9axQFh&edm=ABmJApAAAAAA&ccb=7-5&ig_cache_key=MzIyOTQ1OTA1MjQ5NTA0NTQ4NA%3D%3D.2-ccb7-5&oh=00_AfACKGhDXDDdui-fZ6lXfGPQhpSvo0Sv16ukVJaD6TYZZg&oe=65C34E47&_nc_sid=b41fef" alt="" className="img" />
+            <img style={{borderRadius:'4px'}} src="https://ucarecdn.com/23fa0f10-9dce-4561-9f20-ac6a9045a943/422329877_914052226799805_3834460622772197607_n.heic" alt="" className="img" />
           </Box>
         </Grid>
         
