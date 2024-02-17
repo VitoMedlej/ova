@@ -8,10 +8,10 @@ import QuickCart from '@/Components/Shared/QuickCart/QuickCart'
 import ContextWrapper from '@/context/Contexts'
 
 export const metadata = {
-    title: 'Amaria: Natural, Organic, and Handmade Beauty Essentials - Body, Hair, Lip, and Facial Care',
-    description: `where beauty meets nature. Explore our exquisite range of natural, organic, and handmade skin treats, meticulously crafted by licensed dietitians, aromatherapists, and herbalists. Wholesale and retail options available. Elevate your self-care routine with our Body, Hair, Lip, and Facial Care lines.`,
+    title: 'Amaria Organic Beauty: Natural, Handmade Skin Treats | Wholesale & Retail in Lebanon',
+    description: `Discover Amaria Organic Beauty, your destination for natural, organic, and handmade skin treats in Lebanon. Our licensed team of dietitians, aromatherapists, and herbalists craft premium beauty products. `,
     icons: {
-        icon: `https://ucarecdn.com/d0533aac-5ae0-4ed5-836f-827bb7428c5a/WhatsApp_Image_20240131_at_151932__1_removebg.png`
+        icon: `https://ucarecdn.com/7160c31d-7e4a-4ad4-a132-5c893ec4a84d/WhatsAppImage20240131at1519322.jpeg`
     }
 }
 

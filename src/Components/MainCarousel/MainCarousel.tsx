@@ -26,7 +26,7 @@ const Preloader3 = ({res}:{res:any}) => {
     }
      ])
      const redir = () => {
-        router.push('/services')
+        router.push('/collection/products')
         // console.log('abc')
      }
     useEffect(() => {
@@ -37,7 +37,6 @@ const Preloader3 = ({res}:{res:any}) => {
         setImgs(res?.MainCarousel)
     }
     }, [])
-  const {text} = useLanguage()
     
     return (
         <Box
@@ -114,14 +113,15 @@ const Preloader3 = ({res}:{res:any}) => {
                                  maxWidth:'600px',
                                   
                                   color:'black',fontSize:{xs:'1.2em',
+                                  textTransform:'uppercase',
                                 sm:'1.2em',md:'1.165em',lg:'1.5em'},fontWeight:'900'}}>
                              
-                             WHERE EXCELLENCE MEETS AUTOMOTIVE CARE
+                             luxurious range of natural, organic, and handmade skin treats.
                                 </Typography>
                                 <Typography 
                                 className=' '
                                 sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'600px'}}>
-                                  We take pride in providing the best-in-class services to keep your vehicle in pristine condition.
+                                  Indulge in our collection of skincare essentials, including rejuvenating facial serums, nourishing body butters, and more.
 
                                 </Typography>
                                 <Box className="flex ">
@@ -130,7 +130,7 @@ const Preloader3 = ({res}:{res:any}) => {
                                 onClick={()=>redir()}
                                 
                                 className='   ' sx={{mx:'0',mt:1}}>
-                             View Services
+                                Browse Collection
 
                                 </Btn>
                             

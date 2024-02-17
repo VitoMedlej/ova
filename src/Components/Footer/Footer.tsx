@@ -22,7 +22,7 @@ const Footer = () => (
             </Link>
           </div>
           <Typography component='h1' sx={{ fontSize: '.95em',color:"2b2b2b" }}  className='footer-p '>
-          Welcome to AMARIA, your one-stop destination for premium organic honey. As experts in bee culture, diseases, and treatments, we’re dedicated to providing you with the highest quality honey products.
+          Indulge in our selection of skincare essentials, all formulated with carefully chosen organic ingredients. From rejuvenating facial serums to nourishing body butters, each product is designed to promote healthy, radiant skin.
           </Typography>
 
           {/* <ul className="site-footer__social-networks">
@@ -47,8 +47,8 @@ const Footer = () => (
               </li>
             <li><Link  href="/">
               Home</Link></li>
-            <li><Link href="/collection/products">All Products</Link></li> 
-            <li><Link href="/cart">Cart</Link></li>
+            <li><Link href="/collection/products">Collections</Link></li> 
+            <li><Link href="/about">About</Link></li>
             <li><Link href="/terms-and-conditions">Terms & Conditions</Link></li>
             <li><Link href="/privacy-policy">Privacy Policy</Link></li>
 
@@ -66,8 +66,8 @@ const Footer = () => (
             
             {/* <li><a href="https://www.facebook.com/profile.php?id=100076163602459/" target="_blank" rel="noreferrer" >Facebook</a></li> */}
 
-            <li><a href="https://www.instagram.com/BeeOrganic/" target="_blank" rel="noreferrer" >@BeeOrganic</a></li>
-            <li><a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`} rel="noreferrer" target='_blank' >+{process.env.NEXT_PUBLIC_WA}</a></li>
+            <li><a href="https://www.instagram.com/amaria.organicbeauty/" target="_blank" rel="noreferrer" >@Amaria.organicbeauty</a></li>
+            <li><a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`} rel="noreferrer" target='_blank' >+961 3 959 755</a></li>
             {/* <li><a href={`http://tiktok.com/@thecraftroomlb`} rel="noreferrer" target='_blank' >TikTok</a></li> */}
             <SMicons/>
         

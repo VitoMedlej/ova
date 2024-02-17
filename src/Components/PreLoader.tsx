@@ -56,7 +56,7 @@ PreLoader = ({data,resImages}:any) => {
 
   return (
     <Box >
-      <MainCarousel res={undefined} />
+      <MainCarousel res={resImages} />
       <Grid className='center auto' sx={{px:{xs:1,sm:0},py:{xs:8},maxWidth:'lg'}}>
         <Typography 
                                 className=''
