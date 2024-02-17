@@ -13,13 +13,13 @@ const fetchDataAndSetImgs = async () => {
   try {
 
   
-  const response = await fetch('https://api.jsonbin.io/v3/b/65b2919d41f5677401f28610e', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Master-Key': '$2a$10$iAUMdzZeDAI2qTW61Uz6UuE/S8B2gs4LfVuZxwByPpocU4CuR7Nzo2'
-    },
-    next:{revalidate:1000}
+    const response = await fetch('https://api.jsonbin.io/v3/b/65d085611f5677401f308a98', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': '$2a$10$cy1eVSx6eGQDVl1W9DUyoOtds68xyAGg8pusrd7LDBbemG5ojDkiy'
+      },
+    next:{revalidate:10}
   },
   )
   if (!response?.ok) {
