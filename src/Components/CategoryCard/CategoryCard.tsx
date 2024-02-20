@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { Card, CardContent, CardMedia, Typography, Button } from '@mui/material';
 import Btn from '../Btn/Btn';
+import { useRouter } from 'next/navigation';
 
 const CategoryCard = ({ imageUrl, categoryName } : any) => {
+  const router = useRouter()
   return (
     <Card
     sx={{boxShadow:'none',
@@ -19,7 +21,9 @@ const CategoryCard = ({ imageUrl, categoryName } : any) => {
         <Typography component='h1' gutterBottom className='text-center auto' sx={{pb:1,fontWeight:600,fontSize:'1.2em'}} variant="h1" >
           {categoryName}
         </Typography>
-        <Btn  v2 sx={{border:'none',color:'black',textDecoration:'underline',mt:1}}  className='auto'>
+        <Btn
+        onClick={()=>router.push('/collection/products')}
+        v2 sx={{border:'none',color:'black',textDecoration:'underline',mt:1}}  className='auto'>
           Show More
         </Btn>
       </CardContent>

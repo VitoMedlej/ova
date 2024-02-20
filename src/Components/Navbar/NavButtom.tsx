@@ -36,7 +36,7 @@ const NavButtom = () => {
                     Sale
                     </Typography>
                 </Link> */}
-                <Link className='black decor-none ' href={`/collection/products`}>
+                {/* <Link className='black decor-none ' href={`/collection/products`}>
 
 <Typography 
 className=' cursor center flex gap1 black decor-none captialize'
@@ -48,11 +48,11 @@ alignItems: 'center',
 fontWeight:600,fontSize:{xs:'.86em',sm:'.8em'}}}>
 COLLECTION
 </Typography>
-</Link>
+</Link> */}
 
 
 {
-   ['body care', 'facial care', 'lip care', 'hair care', 'home care'].map(i=>{
+   ['body care', 'facial care',  'hair care','lip care', 'home care'].map(i=>{
         return <Link key={i} className='black decor-none ' href={`/${i.toLocaleLowerCase()}/products`}>
 
         <Typography 

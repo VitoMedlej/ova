@@ -49,8 +49,8 @@ const Testimonial = () => {
     
     
   return (
-    <Box className=' flex col ' sx={{width:'100%',height:'100%'}}>
- <Box className='flex col'  sx={{flex:1,width:'100%',pt:'0em'}}>
+    <Box className=' flex col ' sx={{pt:4,width:'100%',height:'100%'}}>
+ <Box className='flex col'  sx={{flex:1,width:'100%',pt:'1.5em'}}>
 
  <Typography 
                                 className='text-center auto center'

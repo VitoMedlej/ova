@@ -87,8 +87,8 @@ export default function Navbar() {
             margin: '0 auto',
         }}>
             <Box className='center text-center bg2' sx={{width:'100%',py:.25}}>
-                <Typography className='' component='h1' sx={{color:'#0f0f0f',px:.5,py:.2,fontSize:{xs:'.65em',sm:'.75em'}}}>
-            FREE DELIVERY FOR ORDERS ABOVE $40. CASH ON DELIVERY. USD AT DAILY MARKET RATE.
+                <Typography className='' component='h1' sx={{color:'#0f0f0f',px:.5,py:.2,fontSize:{xs:'.65em',sm:'.95em'}}}>
+                {`Amaria’s Atelier is located in Beirut`} 
                 </Typography>
             </Box>
       <Toolbar className='flex relative center items-center' sx={{py:1,px:0,mx:{xs:1},background:'transparent'}}>

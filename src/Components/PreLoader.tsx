@@ -67,15 +67,18 @@ PreLoader = ({data,resImages}:any) => {
                                   color:'black',fontSize:{xs:'1.2em',
                                 sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
                              
-                             Our approach
+                             Our Story
                                 </Typography>
                                 <Typography 
                                 className=' '
                                 sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
-                               We personalize and elaborate a skincare routine for every individual. To maintain a healthy and glowing skin, we recommend you a three-step layering routine with products adapted to your skin type or concern.
+                           Amaria is a range of natural and handmade skincare essentials founded by Marwa Wehbe, a licensed and registered dietitian.
 
                                 </Typography>
-                                <Btn sx={{mt:1}}>
+                                <Btn 
+        onClick={()=>router.push('/about')}
+                                
+                                sx={{mt:1}}>
                                   Learn More
                                 </Btn>
         </Grid>
@@ -97,7 +100,7 @@ PreLoader = ({data,resImages}:any) => {
                                   color:'black',fontSize:{xs:'1.2em',
                                 sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
                              
-                             Our products are suitable for each skin
+                             Get the right products for your skin and your environment.
                                 </Typography>
                                 <Typography 
                                 className='text-center auto center'
@@ -149,12 +152,11 @@ component={'h1'}
     sx={{
     fontSize: {
         xs: '2em',
-        sm: '3em'
     },
     padding:.5,
     fontWeight: '900'
 }}>
- Revitalize Your Hair with Amaria
+Beauty is for quality lovers
 </Typography>
 <Typography
 component={'p'}
@@ -168,7 +170,9 @@ component={'p'}
     padding:.5,
     fontWeight: '300'
 }}>
-Unleash the power of nature with Amarias hair care set. Experience the transformation today!
+Your beauty can grow with age and you can have fabulous skin through youtlife, but it takes paying close attention to the quality of your skincare.
+Amaria products harness the best of luscious emollient, botanical, herbs, fine butter, and pure organic oils to give your skin what it needs and deserves.
+
 </Typography>
             </Box>
         </Grid>
@@ -200,12 +204,11 @@ component={'h1'}
  
     fontSize: {
         xs: '2em',
-        sm: '3em'
     },
     padding:.5,
     fontWeight: '900'
 }}>
- Nourish and Glow Your Hair
+Amaria Care for Healthy, Radiant, and Luminous Skin
 </Typography>
 <Typography
 component={'p'}
@@ -219,7 +222,7 @@ component={'p'}
     padding:.5,
     fontWeight: '300'
 }}>
-Feed your hair the nutrition it craves. Our hair serum provides the perfect nourishment for lustrous growth
+Once you give yourself a complete break from chemicals and synthetic ingredients, and use organic products, you can have a beautiful, luminous skin with a couple of minutes of easy daily care. The rest come from eating well, being your authentic self, and honoring what makes you happy.
 </Typography>
             </Box>
         </Grid>
@@ -391,7 +394,33 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
     {/* <HomeProductsCarousel Collectiontitle={"Browse Our Collections"} delay={3000} data={data?.featuredProducts?.slice(10,18)}/> */}
     {/* <HomeProductsCarousel Collectiontitle={"Browse Our Collections"} delay={3000} data={data?.featuredProducts?.slice(18)}/> */}
 
-     
+      <Container sx={{my:{xs:8,sm:8},pt:{xs:4,sm:2},maxWidth:'lg',mx:'auto'}}>
+
+      <Typography 
+                                className=''
+                                
+                                sx={{
+                                 maxWidth:'600px',
+                                  
+                                  color:'black',fontSize:{xs:'1.2em',
+                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
+                             
+                             Why Amaria?
+                                </Typography>
+                                <Box component='div'
+                                className=' '
+                                sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
+                           <p>• Organic, natural, and handmade.</p>
+    <p>• More than 98% vegan and cruelty free.</p>
+    <p>• Intensely rich in nutrients to nourish, restore, and rejuvenate.</p>
+    <p>• Luxurious quality with affordable prices.</p>
+    <p>• Attractive and unique scents.</p>
+    <p>• Suitable for all skin types.</p>
+    <p>• Eco- friendly.</p>
+    <p>• Natural coloring and preservatives.</p>
+
+                                  </Box >
+      </Container>
 
     <Testimonials/>
 

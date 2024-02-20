@@ -19,7 +19,7 @@ const fetchDataAndSetImgs = async () => {
         'Content-Type': 'application/json',
         'X-Master-Key': '$2a$10$cy1eVSx6eGQDVl1W9DUyoOtds68xyAGg8pusrd7LDBbemG5ojDkiy'
       },
-    next:{revalidate:10}
+    next:{revalidate:1000}
   },
   )
   if (!response?.ok) {
@@ -39,6 +39,25 @@ catch(e){
   return null
 }
 }
+
+const fetchData = async () => {
+  try{
+
+  
+  // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ cache: 'no-store',next:{revalidate:1000} })
+  const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ next:{revalidate:1000} })
+  // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`)
+  let res = req &&  await req.json();
+  if (res) return res
+}
+catch(e)
+{
+
+  console.log('e: ', e);
+  return null
+}
+}
+
 
 export default async function Home() {
   // export default async function Home() {
@@ -74,12 +93,11 @@ export default async function Home() {
 try {
 
       // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ next: { revalidate: 10 } })
-    const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ cache: 'no-store',next:{revalidate:0} })
-    // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`)
-    let res = req &&  await req.json();
+  
       // console.log('res: ', res);
       // const reqImages = await fetch(`https://getpantry.cloud/apiv1/pantry/732d3c8c-d53a-4c4c-830c-fe9b7e021958/basket/Images`,{  cache:'no-store', next: { revalidate: 400 } })
       // let resImages : any = await  reqImages.json();
+      const res = await fetchData()
       let resImages = await fetchDataAndSetImgs()
       // let res = {data:{featuredProducts:null}}
       
