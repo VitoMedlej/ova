@@ -12,10 +12,10 @@ export const getCategorySubcategories = (category : string) => {
       return ['Scrubs', 'Lotions', 'Oils', 'Washes', 'Butters', 'Mists', 'Tanning', 'Underarms'];
     case 'facial care':
       return ['Vitamin C', 'Collagen', 'Hyaluronic Acid', 'Vitamin E', 'Moisturizer (2 in 1)', 'Powdered Mask', 'Aloe Vera Mask'];
+      case 'hair care':
+        return ['Shampoos', 'Conditioners', 'hair Masks', 'Growth Oils'];
     case 'lip care':
       return ['Scrubs', 'Balms (Tinted/Non-tinted)'];
-    case 'hair care':
-      return ['Shampoos', 'Conditioners', 'hair Masks', 'Growth Oils'];
     case 'home care':
       return ['Soaps'];
     default:

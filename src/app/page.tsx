@@ -19,7 +19,7 @@ const fetchDataAndSetImgs = async () => {
         'Content-Type': 'application/json',
         'X-Master-Key': '$2a$10$cy1eVSx6eGQDVl1W9DUyoOtds68xyAGg8pusrd7LDBbemG5ojDkiy'
       },
-    next:{revalidate:1000}
+    next:{revalidate:0}
   },
   )
   if (!response?.ok) {
@@ -45,7 +45,7 @@ const fetchData = async () => {
 
   
   // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ cache: 'no-store',next:{revalidate:1000} })
-  const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ next:{revalidate:1000} })
+  const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ next:{revalidate:0} })
   // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`)
   let res = req &&  await req.json();
   if (res) return res
