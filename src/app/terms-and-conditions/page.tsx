@@ -19,7 +19,7 @@ If you continue to browse and use this website, you are agreeing to comply with 
 `When you place an order on our website, you may receive notifications regarding your order, its shipping, and promotional notifications from us. `,
 `Pricing`,
 `Items on sale or advertised at a discounted or reduced price are generally floor stock, and currently on hand at the time of the sale only. While we may be able to order more stock of a particular item for you, it will not generally be sold at the discounted rate but rather our normal, everyday retail price. Prices and other offers are subject to availability. Sale prices are also subject to and only available for a defined period of time and/or until on-hand stock is no longer available. Sale prices may not be available or applicable if you are wanting the item for collection at a later date.`,
-`Any backordered items that are ordered/purchased during a sale will be amended to full price, or the order cancelled at your discretion. Quantities may be also be limited to a specified number per person or per transaction. These terms are generally applied to all sales and promotions unless otherwise specified.`,
+// `Any backordered items that are ordered/purchased during a sale will be amended to full price, or the order cancelled at your discretion. Quantities may be also be limited to a specified number per person or per transaction. These terms are generally applied to all sales and promotions unless otherwise specified.`,
 
 
 ]

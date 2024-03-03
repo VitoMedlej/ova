@@ -3,35 +3,38 @@ import FAQ from '@/Components/FAQ/FAQ'
 import { Container, Box, Typography, Divider } from '@mui/material'
 import React from 'react'
 
-const text = [
-    `Your health is our top priority. We meticulously curate our product range to ensure that you have access to the highest-quality natural supplements available. From ancient remedies like ashwagandha and tongkat ali to the modern marvels of cordyceps and lion's mane mushrooms, we've assembled a premium collection that's designed to support your journey toward optimal health.`,
-    `At AMARIA, excellence is not just a goal; it's our way of life. We are committed to providing you with products that are not only effective but also safe. Our team of experts works tirelessly to source the purest and most potent ingredients from nature's bounty.`,
-    `We believe that when you choose AMARIA, you're choosing a partner on your path to a healthier and more vibrant life.`,
-    `Our commitment extends beyond your well-being. We're equally dedicated to the well-being of our planet. That's why we use eco-friendly packaging and support sustainable farming practices. We believe that by preserving the environment, we can help ensure a healthier future for generations to come.`,
-  
-]
+const text = `Amaria is a brand owned by a licensed dietitian.
+Project Amaria’s aim was to apply the raw materials and active ingredients directly to the skin, hair and nails while observing the results of doing so when we, as Dietitians, recommend food containing those ingredients to maintain our body from within and without.
+
+We started by one product, and  a lot of success stories proved our vision, and we began to produce new products every now and then.
+
+One of our biggest success stories happened with my own daughter, who had suffered a lot ever since her childhood, from dry skin problems and tried tons of chemical medications but with no luck. Then we decided to resort mother nature, which had the key!
+
+Being owned by a woman, Amaria guarantees the mesmerizing results anyone can ever get!
+
+Although Amaria has launched in the midst of Lebanon’s crisis and tough situations but it has made its way up to the top and we promise to keep going our way making the best natural products which our beautiful customers deserve.`
 const Index = () => {
   return (
-    <Container maxWidth='lg' className='' sx={{mx:'auto',mt:12,py:4}}>
-           <Typography sx={{mb:1,mx:'auto',fontSize:'2.5em',fontWeight:'600'}} className=" center text-center">
-            ABOUT US
+    <Container maxWidth='lg' className='' sx={{mx:'auto',mt:22,py:4}}>
+           <Typography component='h1' sx={{mb:1,mx:'auto',fontSize:'2.5em',fontWeight:'600'}} className=" center text-center">
+            Our Story
         </Typography>
-        <Box sx={{width:'100%',height:'400px'}}>
+        <Box sx={{width:'100%',height:'200px'}}>
             <img src="https://ucarecdn.com/7160c31d-7e4a-4ad4-a132-5c893ec4a84d/WhatsAppImage20240131at1519322.jpeg" alt="" className="img contain" />
         </Box>
     
         <Box sx={{my:4}}>
                 {
-                    text.map(i=>{
+                    text?.split('\n\n').map(i=>{
                             return <Typography key={i} sx={{maxWidth:'md',py:1}} className='auto text-center'>{i}</Typography>
                     })
                 } 
         </Box>
-        <Divider></Divider>
+        {/* <Divider></Divider>
         <Typography sx={{pt:4, mb:1,mx:'auto',fontSize:'2.5em',fontWeight:'600'}} className=" center text-center">
             Frequently Asked Questions
         </Typography>
-            <FAQ/>
+            <FAQ/> */}
     </Container>
   )
 }
