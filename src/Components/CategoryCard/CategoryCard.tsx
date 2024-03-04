@@ -21,11 +21,11 @@ const CategoryCard = ({ imageUrl, categoryName } : any) => {
         <Typography component='h1' gutterBottom className='text-center auto' sx={{pb:1,fontWeight:600,fontSize:'1.2em'}} variant="h1" >
           {categoryName}
         </Typography>
-        <Btn
+        {/* <Btn
         onClick={()=>router.push('/collection/products')}
         v2 sx={{border:'none',color:'black',textDecoration:'underline',mt:1}}  className='auto'>
           Show More
-        </Btn>
+        </Btn> */}
       </CardContent>
     </Card>
   );
