@@ -23,22 +23,19 @@ import useLanguage from '@/Hooks/useLanguage';
 //             name:`Powerhouse’s Owner `,img:'https://ucarecdn.com/3b40bedc-0aa3-4247-a196-fd05de4d4f87/003011.jpg'}
 
 // ]
-const tests = [
+const reviews = [
   {
-    title: "Discover the Power of AMARIA!",
-    reviewer: "(Ella, Health Enthusiast)",
-    description: "AMARIA is a true haven for health and wellness enthusiasts like myself. Their premium selection of natural supplements is a game-changer. From the revitalizing effects of ashwagandha to the vitality boost of tongkat ali, they have it all. I've experienced a remarkable improvement in my overall well-being since I started incorporating their products into my daily routine. AMARIA is my go-to destination for all my health and wellness needs!",
+      description: "Dear Amaria, just wanted to drop you a line to say thank you for the amazing products. They are beautiful and I particularly like the face oil. It is heavenly and feels really nourishing! Thank you again, Love Mela."
   },
   {
-    title: "A Wellness Oasis with AMARIA!",
-    reviewer: "(Oliver, Fitness Fanatic)",
-    description: "When it comes to my fitness journey, AMARIA has been a true ally. Their range of natural supplements, including cordyceps and lion's mane mushroom, has been a game-changer in my routine. The quality of their products is unparalleled, and I've seen significant improvements in my energy levels and mental clarity. AMARIA is my one-stop-shop for all things related to health and wellness. I can't recommend them enough!",
+      description: "Hello hello, Just a quick line to say that the rejuvenate products are great and haven't caused a reaction. My daughter says it makes my skin look smoother and less tired! I have only been using it just over a week or so - wonderful results. Have a great weekend!"
   },
   {
-    title: "AMARIA: Your Path to Optimal Health!",
-    reviewer: "(Ava, Wellness Advocate)",
-    description: "As a wellness advocate, I'm always on the lookout for high-quality supplements, and AMARIA has exceeded my expectations. Their comprehensive range of natural products, including ashwagandha, tongkat ali, cordyceps mushroom, and more, is a testament to their commitment to well-being. Whether you're a health enthusiast or someone looking to enhance their overall health, AMARIA is the answer. Trust me; you won't be disappointed!",
+      description: "I’m very keen on these amazing products by Conscious Skincare. They not only smell divine, feel gorgeous but have the ingredients that I dream of! No nasties, just pure, thought out, conscious ingredients."
   },
+  {
+      description: "Hi there! I just wanted to drop you a message because I've been so shocked at how well my skin is reacting to your products! I ordered a couple of sample size products to try as my skin is sensitive & spot prone, and NOTHING has worked this quickly before. Thank you so much for creating your beautiful, natural, organic, environmentally friendly skin care products. I can't wait to order them alllll."
+  }
 ];
 
 const Testimonial = () => {
@@ -117,16 +114,16 @@ const Testimonial = () => {
                 modules={[ Autoplay]}
               >
 
-                {tests.map((item ) => {
-                    if (!item.title) 
+                {reviews.map((item ) => {
+                    if (!item.description) 
                         return
                     return <SwiperSlide
                         style={{
                         padding:'2em 0',
                         marginRight: '0 !important'
                     }}
-                        key={item.title}>
-                         <TestimonialCard title={item.title} reviewer={item.reviewer} description={item.description}/>
+                        key={item.description}>
+                         <TestimonialCard title={item.description} reviewer={item.description} description={item.description}/>
 
                     </SwiperSlide>
                     // return <SwiperSlide className='swiper-wrapper1'

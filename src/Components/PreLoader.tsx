@@ -86,7 +86,7 @@ PreLoader = ({data,resImages}:any) => {
       <HomeProductsCarousel  data={data} Collectiontitle={''} delay={0}/>
 
       
-
+{/* 
       <Container className='flex col ' sx={{
         px:0,
         my:{xs:8,sm:12}}} maxWidth='lg'>
@@ -108,7 +108,6 @@ PreLoader = ({data,resImages}:any) => {
                            Do you know your skin type? Read more to understand your skin type or contact us for a free consultation with our skin experts.
 
                                 </Typography>
-
 
                                 <Container className='flex row wrap space-between justify-between ' sx={{
         justifyContent:{xs:'justify-between',sm:'justify-between'},
@@ -136,9 +135,12 @@ PreLoader = ({data,resImages}:any) => {
     }
     
     </Container>
-    </Container>
 
-      <Grid container sx={{maxWidth:'lg',mx:'auto'}}>
+
+
+    </Container> */}
+
+      <Grid container sx={{pt:6,maxWidth:'lg',mx:'auto'}}>
         <Grid className='flex items-center' item xs={12} md={5}>
             <Box className='bg2 col flex items-center' sx={{
             

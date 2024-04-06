@@ -14,7 +14,7 @@ const sm = [
       Icon:`https://cdn-icons-png.flaticon.com/128/5968/5968764.png`,
       href:'https://www.facebook.com/people/amariaorganicbeauty/100078718512812/'
     },
-    {Icon:'https://cdn-icons-png.flaticon.com/128/4423/4423697.png',href:'https://wa.me/+96103959755'},
+    {Icon:'https://cdn-icons-png.flaticon.com/128/4423/4423697.png',href:'https://wa.me/+96178906134'},
   
  ]
 const SMicons = ({sx,color}:{color?:string,sx?:any}) => {

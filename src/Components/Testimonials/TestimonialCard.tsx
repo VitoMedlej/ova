@@ -33,11 +33,11 @@ const TestimonialCard = ({title,reviewer,description}:{title:string,reviewer:str
                     // color:'#f8f8f8',
                 fontWeight: 300,
                     maxWidth:'500px',
-                pt: 1.25,
+                py: 1.25,
                 fontSize: 14
             }}
                 component={'p'}>{description}</Typography>
-                 <Typography
+                 {/* <Typography
             className='color2'
                 sx={{
                     // color:'#f8f8f8',
@@ -48,7 +48,7 @@ const TestimonialCard = ({title,reviewer,description}:{title:string,reviewer:str
                 pt:1,
                 fontSize: 15
             }}
-                component={'p'}>-{reviewer}</Typography>
+                component={'p'}>-{reviewer}</Typography> */}
 
 
         </Box>
