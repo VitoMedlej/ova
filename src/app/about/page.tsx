@@ -20,7 +20,7 @@ const Index = () => {
             Our Story
         </Typography>
         <Box sx={{width:'100%',height:'200px'}}>
-            <img src="https://ucarecdn.com/7160c31d-7e4a-4ad4-a132-5c893ec4a84d/WhatsAppImage20240131at1519322.jpeg" alt="" className="img contain" />
+            <img src="https://ucarecdn.com/bf3ec202-9afa-4128-a5ee-d6963a5ad711/ovalogo.PNG" alt="" className="img contain" />
         </Box>
     
         <Box sx={{my:4}}>

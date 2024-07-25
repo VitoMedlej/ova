@@ -35,7 +35,6 @@ const Index = () => {
       product : null,
       moreProducts : []
     })
-    console.log('data: ', data);
     
     
     const [selectedSize, setselectedSize] = useState({size:'',price:''});
@@ -71,16 +70,23 @@ const Index = () => {
         return  ()=> setLoading(false)
 
       }, [])
-      console.log('parseFloat(data?.product?.size): ', parseFloat(data?.product?.size));
   return (
      
     
-      <Box sx={{mt:{xs:8,sm:14}}}>
+      <Box sx={{mt:{xs:0,sm:0}}}>
  
 {!loading && data?.product !== undefined && data?.product?.title ?  <Grid sx={{maxWidth:'lg',mx:1,pt:{sm:15,md:15,lg:9}}} className='auto' container>
        <Grid  item xs={12}  md={7} >
          <ProductImageCarousel images={data?.product?.images}/>
-   
+         <Box className='flex row wrap' sx={{mx:1,mt:1,gap:1}}>
+  {data?.product?.images?.length > 0 && data?.product?.images.map((img : string)=>{
+    let imageCount = data?.product?.images.length;
+    let widthPercentage = imageCount > 0 ? 95 / imageCount : 100;
+    return <Box sx={{width:{xs:`${widthPercentage}%`},height:{xs:'100px',md:'150px'}}}>
+      <img src={img} alt="" className="img " />
+    </Box>
+  })}
+</Box>
        </Grid>
        <Grid sx={{
         // border:'1px solid #00000029',
@@ -119,11 +125,11 @@ const Index = () => {
               </Box>
             
      
-              <SelectWeight
+              {/* <SelectWeight
               selectedSize={selectedSize  }
               setselectedSize={setselectedSize}
               sizes={data?.product?.sizes ? data?.product?.sizes:  [{price:Number(data?.product?.price),size:parseFloat(data?.product?.size)}]}/>
-     
+      */}
              <Btn 
                      onClick={()=>
                       // data?.product?.stock >= selectedQuantity   && 
@@ -204,13 +210,18 @@ const Index = () => {
          </Box>}
 
            
-             <Typography className='gray' sx={{whiteSpace:'pre-wrap',maxWidth:'100%'}}>
+             {/* <Typography className='gray' sx={{whiteSpace:'pre-wrap',maxWidth:'100%'}}>
    {data?.product?.description}
-             </Typography>
+             </Typography> */}
+                <Typography 
+      className='gray' 
+      sx={{whiteSpace:'pre-wrap',maxWidth:'100%'}}
+      dangerouslySetInnerHTML={{ __html: data?.product?.description }}
+    />
          </Box>
        </Grid>
          {/* <ProductReview/>  */}
-       <HomeProductsCarousel Collectiontitle={"Shop More Products"} delay={3000} data={data?.moreProducts} />
+     
    </Grid> : <Box className='flex auto center align-center' sx={{py:15}}>
 
      <CircularProgress />

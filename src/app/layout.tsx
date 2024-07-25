@@ -8,10 +8,10 @@ import QuickCart from '@/Components/Shared/QuickCart/QuickCart'
 import ContextWrapper from '@/context/Contexts'
 
 export const metadata = {
-    title: 'Amaria Organic Beauty: Natural, Handmade Skin Treats | Wholesale & Retail in Lebanon',
-    description: `Discover Amaria Organic Beauty, your destination for natural, organic, and handmade skin treats in Lebanon. Our licensed team of dietitians, aromatherapists, and herbalists craft premium beauty products. `,
+    title: 'OVA Skincare - 100% Natural Tanning Oil | Lebanon',
+    description: `Discover OVA Skincare's 100% natural tanning oil enriched with Vitamin B and E. Achieve a deep, even tan with our dermatologist-approved formula. Available in all pharmacies in Lebanon.`,
     icons: {
-        icon: `https://ucarecdn.com/7160c31d-7e4a-4ad4-a132-5c893ec4a84d/WhatsAppImage20240131at1519322.jpeg`
+        icon: `https://ucarecdn.com/bf3ec202-9afa-4128-a5ee-d6963a5ad711/ovalogo.PNG`
     }
 }
 
@@ -21,7 +21,9 @@ export default function RootLayout({children} : {
     return (
         <html lang="en">
             <head>
-            <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
             </head>
 
             <body className='relative'>

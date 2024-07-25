@@ -6,7 +6,7 @@ const Perks = () => {
   const items = [
     { title: 'Delivery Anywhere In Lebanon', text: 'Fast and reliable shipping', icon: 'https://cdn-icons-png.flaticon.com/128/2769/2769339.png' },
     { title: 'Quality Assurance', text: 'Premium and fresh products', icon: 'https://cdn-icons-png.flaticon.com/128/1534/1534216.png' },
-    { title: 'Fresh from the Source', text: 'Locally sourced ingredients', icon: 'https://cdn-icons-png.flaticon.com/128/4689/4689710.png' },
+    { title: 'Crafted in a Lab', text: 'Carefully crafted by experts', icon: 'https://cdn-icons-png.flaticon.com/128/7388/7388554.png' },
 ];
   return (
     <Box  sx={{width:'100%',mb:8}}>
@@ -24,7 +24,7 @@ const Perks = () => {
                     <Box sx={{ml:.7}} className="flex col">
 
                     <Typography className='clr2' sx={{fontStyle:'',fontSize:{xs:'1em',sm:'1.29em'},
-                    fontWeight:900}}  component={'h1'}>{i.title}</Typography>
+                    fontWeight:500}}  component={'h1'}>{i.title}</Typography>
                      <Typography className='clr2' sx={{fontSize:{xs:'.95em',sm:'.95em'},
                     fontWeight:300}}  component={'h1'}>{i.text}</Typography>
                     </Box>

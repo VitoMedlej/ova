@@ -2,12 +2,12 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Avenir', sans-serif !important;
+    font-family: "Work Sans", sans-serif !important;
 
 
 }
 * h1,h2,h3,h4,h5,h6 ,p,button,input,select,textarea,a{
-    font-family: 'Avenir', sans-serif !important;
+    font-family: "Work Sans", sans-serif !important;
 }
 .emailinput {
     min-width: 300px;
@@ -23,9 +23,9 @@ body {
 }
  
 
-$color : #ba6e3e !important;
+$color : #c9a45d !important;
 $color2 : #0e0f0a !important;
-$color3 : #e1d4c7 !important;
+$color3 : #ba6e3e !important;
 .color3 {
     color: $color3;
 }
@@ -67,6 +67,9 @@ $color3 : #e1d4c7 !important;
 }
 .shadow {
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.whitebg {
+    background: white;
 }
 .limited {
     overflow: hidden;

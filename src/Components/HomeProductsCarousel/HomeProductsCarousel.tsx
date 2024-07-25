@@ -42,7 +42,7 @@ const ProductCollection = ({sx,delay,Collectiontitle,data,setQuickView} : {
                     sm: '1.4em'
                 },
                 padding:.5,
-                fontWeight: '900'
+                fontWeight: '500'
             }}>
              Our Best Sellers
             </Typography>
@@ -62,13 +62,13 @@ const ProductCollection = ({sx,delay,Collectiontitle,data,setQuickView} : {
                 
                 data={data && data.length > 0 && data?.slice(0,25) || []}/>
             </Box>
-
+{/* 
             <Btn
             className='auto'
             sx={{background:'none'}}
             onClick={()=>router.push('/collection/products')}>
                 Shop All
-            </Btn>
+            </Btn> */}
    
 {/* <Divider  light /> */}
         

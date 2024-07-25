@@ -20,14 +20,13 @@ export default function App({images}:{images:string[] | []| undefined}) {
       <Swiper
         spaceBetween={30}
         effect={"fade"}
+        speed={4000}
         autoplay={
-          {delay:2000}
+          {delay:3000}
         }
-        navigation={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination]}
+        navigation={false}
+        
+        modules={[Autoplay]}
         className="mySwiper"
       >
 {

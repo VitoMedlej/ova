@@ -8,13 +8,13 @@ import React from 'react'
 const sm = [
     {
         Icon:'https://cdn-icons-png.flaticon.com/128/174/174855.png',
-        href:'https://www.instagram.com/amaria.organicbeauty/'
+        href:`${process.env.NEXT_PUBLIC_INSTA}`
     },
     {
-      Icon:`https://cdn-icons-png.flaticon.com/128/5968/5968764.png`,
+      Icon:`https://cdn-icons-png.flaticon.com/128/174/174848.png`,
       href:'https://www.facebook.com/people/amariaorganicbeauty/100078718512812/'
     },
-    {Icon:'https://cdn-icons-png.flaticon.com/128/4423/4423697.png',href:'https://wa.me/+96178906134'},
+    {Icon:'https://cdn-icons-png.flaticon.com/128/15713/15713434.png',href:'https://wa.me/+96171213284'},
   
  ]
 const SMicons = ({sx,color}:{color?:string,sx?:any}) => {

@@ -15,7 +15,6 @@ const ProductCard = ({
     title,
     price,
     sizes,
-
     images,
     category,
     _id,
@@ -52,12 +51,12 @@ const ProductCard = ({
             margin: '0em auto',
             my:1,
             borderRadius: '5px',
-            minWidth: {sm:'30%'},
+            minWidth: {xs:'98%'},
             width: width
                 ? width
                 : {
-                    xs: '48%',
-                    sm: '32%',
+                    xs: '98%',
+                    sm: '98%',
                 }
             
         }}>
@@ -126,7 +125,7 @@ const ProductCard = ({
                         addToCart(1,_id,{title,category,img:images[0],_id,price:newPrice?Number(newPrice):price},true)}
                     v2
                     sx={{
-                        border:'1px solid transparent',
+                        // border:'1px solid transparent',
                         ':hover':{background:'transparent',border:'1px solid '},
                         color:'black !important',
                         margin:'0 '

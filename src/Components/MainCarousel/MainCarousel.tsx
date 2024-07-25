@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import { useRouter } from 'next/navigation';
 import { Autoplay } from 'swiper';
 
-import useLanguage from '@/Hooks/useLanguage';
 import Btn from '../Btn/Btn';
 
 
@@ -17,7 +16,7 @@ const Preloader3 = ({res}:{res:any}) => {
     const router = useRouter()
     const [imgs,setImgs] = useState([
         {
-            img : 'https://helwe.com/cdn/shop/files/HELWE1125_1500x.jpg?v=1694639701',
+            img : 'https://ucarecdn.com/992b1682-7acb-4d1a-bbe3-6cd86a374882/ovapic.jpg',
             position:'top',
         },
       {
@@ -48,10 +47,10 @@ const Preloader3 = ({res}:{res:any}) => {
             maxWidth:'none',
             // maxWidth: 'lg',
             minHeight:{xs:'500px',sm:'500px',lg:'600px'},
-            maxHeight:{sm:'100%',md:'600px',lg:'100vh'},
+            maxHeight:{sm:'80vh',md:'600px',lg:'80vh'},
             margin: '0 auto',
          
-            height : {xs:'100vh',sm:'600px',md:'100vh'},
+            height : {xs:'80vh',sm:'600px',md:'80vh'},
              
             display: {
                 xs: 'flex'
@@ -59,11 +58,11 @@ const Preloader3 = ({res}:{res:any}) => {
             // mt:20,
         }}>
             <Swiper
-            
+            speed={1200}
                 navigation={false}
                 slidesPerView={1}
                 spaceBetween={0}
-                loop={true}
+                loop={false}
                 autoplay={{
                 delay: 4000,
                 disableOnInteraction: true
@@ -79,7 +78,7 @@ const Preloader3 = ({res}:{res:any}) => {
                         <Box
                             sx={{
                                 position:'relative',
-                                height: '100%',
+                                height: '80vh',
                             width:'100%'
                         }}>
                         <Container className='   absolute ' 
@@ -87,23 +86,20 @@ const Preloader3 = ({res}:{res:any}) => {
                         
                         sx={{
                             background: '#ffffffed',
+                            transform:'translateY(-70%)',
+                            top:{xs:'65%',sm:'70%'},
 
-                            right:{xs:'',lg:'50%'},
-                            top:{xs:'60%',md:'60%'},
+                          
                         }} maxWidth='sm' disableGutters>
                             
                             <Box 
                             className='  '
                             sx={{
-                                top:'50%',
                                 background: '#ffffffed',
-                                width:{xs:'auto',sm:'400px',md:'450px'},
-                                // maxWidth:'850px',
                                 mx: {xs:1},
                                 px:3,
                                 py:3,
-                                borderRadius:'8px',
-                                transform:'translateY(-50%)',
+                                borderRadius:'0px',
                                 zIndex:123456,
                                 position:'absolute'}}>
                                 <Typography 
@@ -114,16 +110,16 @@ const Preloader3 = ({res}:{res:any}) => {
                                   
                                   color:'black',fontSize:{xs:'1.2em',
                                   textTransform:'uppercase',
-                                sm:'1.2em',md:'1.165em',lg:'1.5em'},fontWeight:'900'}}>
+                                sm:'1.2em',md:'1.165em',lg:'1.5em'},fontWeight:'500'}}>
                              
-                             luxurious range of natural, organic, and handmade skin treats.
+                             Achieve a Radiant Glow with OVA Skincare
                                 </Typography>
-                                <Typography 
+                                {/* <Typography 
                                 className=' '
                                 sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'600px'}}>
                                   Indulge in our collection of skincare essentials, including rejuvenating facial serums, nourishing body butters, and more.
 
-                                </Typography>
+                                </Typography> */}
                                 <Box className="flex ">
 
                                 <Btn

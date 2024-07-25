@@ -13,7 +13,7 @@ const TestimonialCard = ({title,reviewer,description}:{title:string,reviewer:str
                 boxShadow:'1px 1px 3px #00000014',
                 px:2,
                 maxWidth:'500px',
-                maxHeight:'400px',
+                height:'300px',
                 borderBottom: '1px solid white'
         }}>
 
@@ -22,8 +22,8 @@ const TestimonialCard = ({title,reviewer,description}:{title:string,reviewer:str
 
 
             </Box>
-<Box sx={{pt:4}}>
-<Rating sx={{mb:.25}} readOnly value={5}></Rating>
+<Box className='auto w100' sx={{pt:4}}>
+<Rating  sx={{mb:.25}} readOnly value={5}></Rating>
 
 </Box>
 

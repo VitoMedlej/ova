@@ -7,7 +7,7 @@ const useCart = () => {
     const {cartOpen, setCartOpen} = useCartContext();
     const incrementQty = (_id : string, newValue?: number, productselectedSize?: string, productselectedPrice?: string) => {
 
-        const state = loadState('prodNtX932ux2') || [];
+        const state = loadState('Vz25nGzruk') || [];
         let foundIndex = state.findIndex((value : ICartItem) => value._id === _id);
         let selectedItem = state[foundIndex];
 
@@ -26,7 +26,7 @@ const useCart = () => {
             }
             state[foundIndex] = selectedItem
 
-            saveState('prodNtX932ux2', state)
+            saveState('Vz25nGzruk', state)
             return true
         }
         return false;
@@ -53,7 +53,7 @@ const useCart = () => {
         }
         
         //if we do not have the item in cart, insert it
-        pushState('prodNtX932ux2', {
+        pushState('Vz25nGzruk', {
             qty: selectedQuantity || 1,
             img: product.img,
             category: product

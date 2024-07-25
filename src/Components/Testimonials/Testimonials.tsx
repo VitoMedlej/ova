@@ -56,7 +56,7 @@ const Testimonial = () => {
                                  maxWidth:'600px',
                                   
                                   color:'black',fontSize:{xs:'1.2em',
-                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
+                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'500'}}>
               {text('Our Customers speak for us', 'عملاؤنا يتحدثون عنا')}
 
             </Typography>

@@ -8,8 +8,8 @@ import SMicons from '../SMicons/SMicons';
 
 
 const Footer = () => (
-  <footer className="site-footer bg2 " style={{color:'black',background:'white'}}>
-    <div className="container bg2" style={{color:'black',background:'white'}}>
+  <footer className="site-footer whitebg " style={{color:'black',background:'white'}}>
+    <div className="container whitebg" style={{color:'black',background:'white'}}>
       <div className="site-footer__top ">
         <div className="site-footer__description">
           <div className='logos cursor'>
@@ -18,11 +18,11 @@ const Footer = () => (
               {/* <a><h1 className="site-logo"><Logo />E-Shop</h1></a> */}
               {/* https://res.cloudinary.com/dwxm8f25f/image/upload/v1675357773/logo_ghli5e.jpg */}
               {/* https://res.cloudinary.com/dwxm8f25f/image/upload/v1675713948/logo_sktnut_1_jwy2hk.png */}
-            <img className='img ' src='https://ucarecdn.com/d0533aac-5ae0-4ed5-836f-827bb7428c5a/WhatsApp_Image_20240131_at_151932__1_removebg.png' alt="Pets Town Lebanon Logo" />
+            <img className='img ' src='https://ucarecdn.com/bf3ec202-9afa-4128-a5ee-d6963a5ad711/ovalogo.PNG' alt="Pets Town Lebanon Logo" />
             </Link>
           </div>
           <Typography component='h1' sx={{ fontSize: '.95em',color:"2b2b2b" }}  className='footer-p '>
-          Indulge in our selection of skincare essentials, all formulated with carefully chosen organic ingredients. From rejuvenating facial serums to nourishing body butters, each product is designed to promote healthy, radiant skin.
+          OVA Tanning Oil is a 100% natural product that keeps your skin healthy and hydrated while protecting it from harmful UV rays. Enriched with coconut oil, it leaves your body with a bronzed, smooth tan and gives your skin the radiance it needs.
           </Typography>
 
           {/* <ul className="site-footer__social-networks">
@@ -66,8 +66,8 @@ const Footer = () => (
             
             {/* <li><a href="https://www.facebook.com/profile.php?id=100076163602459/" target="_blank" rel="noreferrer" >Facebook</a></li> */}
 
-            <li><a href="https://www.instagram.com/amaria.organicbeauty/" target="_blank" rel="noreferrer" >@Amaria.organicbeauty</a></li>
-            <li><a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`} rel="noreferrer" target='_blank' >+961 78 906 134</a></li>
+            <li><a href={process.env.NEXT_PUBLIC_INSTA} target="_blank" rel="noreferrer" >@ovaskincaree</a></li>
+            <li><a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`} rel="noreferrer" target='_blank' >+961 71 213 284</a></li>
             {/* <li><a href={`http://tiktok.com/@thecraftroomlb`} rel="noreferrer" target='_blank' >TikTok</a></li> */}
             <SMicons/>
         
@@ -77,8 +77,8 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="site-footer__bottom bg2 " style={{color:'black',borderTop:"1px solid #0000001f"}}>
-      <div className="container bg2" style={{color:'black'}}>
+    <div className="site-footer__bottom whitebg " style={{color:'black',borderTop:"1px solid #0000001f"}}>
+      <div className="container whitebg" style={{color:'black'}}>
         <p>Website Developed By{' '}
           <a style={{ color: 'black' }} href={`${'https://www.onbeirut.com'}`}>OnBeirut Agency </a></p>
       </div>

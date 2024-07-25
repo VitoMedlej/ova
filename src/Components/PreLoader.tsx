@@ -13,9 +13,9 @@ import Btn from './Btn/Btn'
 import useLanguage from '@/Hooks/useLanguage'
 import CategoryCard from './CategoryCard/CategoryCard'
 import HomeProductsCarousel from './HomeProductsCarousel/HomeProductsCarousel'
+import FullscreenPoster from './FullscreenPoster/FullscreenPoster'
 
-const 
-PreLoader = ({data,resImages}:any) => {
+const PreLoader = ({data,resImages}:any) => {
   const router= useRouter();
   const {text} = useLanguage()
   const textsArray = [
@@ -55,7 +55,8 @@ PreLoader = ({data,resImages}:any) => {
   
 
   return (
-    <Box >
+
+        <Box >
       <MainCarousel res={resImages} />
       <Grid className='center auto' sx={{px:{xs:1,sm:0},py:{xs:8},maxWidth:'lg'}}>
         <Typography 
@@ -65,28 +66,25 @@ PreLoader = ({data,resImages}:any) => {
                                  maxWidth:'600px',
                                   
                                   color:'black',fontSize:{xs:'1.2em',
-                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
+                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'500'}}>
                              
-                             Our Story
+                             About Ova Skin Care
                                 </Typography>
                                 <Typography 
                                 className=' '
                                 sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
-                           Amaria is a range of natural and handmade skincare essentials founded by Marwa Wehbe, a licensed and registered dietitian.
+                       Achieve a golden tan quickly with OVA's 100% natural tanning oil, enriched with Vitamin B and E for deep hydration and long-lasting results. Available in all pharmacies in Lebanon.
 
                                 </Typography>
-                                <Btn 
-        onClick={()=>router.push('/about')}
-                                
-                                sx={{mt:1}}>
-                                  Learn More
-                                </Btn>
+                           
         </Grid>
+
     
       <HomeProductsCarousel  data={data} Collectiontitle={''} delay={0}/>
 
+      <Perks/>
       
-{/* 
+
       <Container className='flex col ' sx={{
         px:0,
         my:{xs:8,sm:12}}} maxWidth='lg'>
@@ -98,7 +96,7 @@ PreLoader = ({data,resImages}:any) => {
                                  maxWidth:'600px',
                                     px:1,
                                   color:'black',fontSize:{xs:'1.2em',
-                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
+                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'500'}}>
                              
                              Get the right products for your skin and your environment.
                                 </Typography>
@@ -138,14 +136,14 @@ PreLoader = ({data,resImages}:any) => {
 
 
 
-    </Container> */}
+    </Container>
 
       <Grid container sx={{pt:6,maxWidth:'lg',mx:'auto'}}>
         <Grid className='flex items-center' item xs={12} md={5}>
-            <Box className='bg2 col flex items-center' sx={{
+            <Box className='whitebg col flex items-center' sx={{
             
              px:{xs:1,sm:4},py:4,
-              borderRadius:'4px',
+              borderRadius:'0px',
               transform:{md:'translateX(25%)'},
            }}>
             <Typography
@@ -156,9 +154,9 @@ component={'h1'}
         xs: '2em',
     },
     padding:.5,
-    fontWeight: '900'
+    fontWeight: '500'
 }}>
-Beauty is for quality lovers
+Elevate Your Glow with OVA Tanning Oil
 </Typography>
 <Typography
 component={'p'}
@@ -172,31 +170,29 @@ component={'p'}
     padding:.5,
     fontWeight: '300'
 }}>
-Your beauty can grow with age and you can have fabulous skin through youtlife, but it takes paying close attention to the quality of your skincare.
-Amaria products harness the best of luscious emollient, botanical, herbs, fine butter, and pure organic oils to give your skin what it needs and deserves.
-
+Transform your tanning routine with OVA Tanning Oil. Crafted from 100% natural ingredients, our formula ensures your skin not only gets a beautiful bronzed glow but also stays nourished and protected. Infused with coconut oil and essential vitamins, our tanning oil delivers deep hydration and a radiant finish.
 </Typography>
             </Box>
         </Grid>
         <Grid item xs={12} md={7}>
-          <Box className='auto' sx={{width:'95%',height:'100%'}}>
-            <img style={{borderRadius:'4px'}} src="https://ucarecdn.com/b40a6c28-337e-4ee3-b675-87eb94bbb9cf/413040906_17962573337695373_7471455854767187837_n.jpg" alt="" className="img" />
+          <Box className='auto' sx={{width:'95%',height:{xs:'100%',sm:'500px'}}}>
+            <img style={{borderRadius:'0px'}} src="https://ucarecdn.com/b40a6c28-337e-4ee3-b675-87eb94bbb9cf/413040906_17962573337695373_7471455854767187837_n.jpg" alt="" className="img" />
           </Box>
         </Grid>
       </Grid>
 
       <Grid container sx={{my:{xs:6,sm:12},maxWidth:'lg',mx:'auto'}}>
       <Grid item xs={12} md={7}>
-          <Box className='auto' sx={{width:'95%',height:'100%'}}>
-            <img style={{borderRadius:'4px'}} src="https://ucarecdn.com/23fa0f10-9dce-4561-9f20-ac6a9045a943/422329877_914052226799805_3834460622772197607_n.heic" alt="" className="img" />
+          <Box className='auto' sx={{width:'95%',height:{xs:'100%',sm:'500px'}}}>
+            <img style={{borderRadius:'0px'}} src="https://ucarecdn.com/23fa0f10-9dce-4561-9f20-ac6a9045a943/422329877_914052226799805_3834460622772197607_n.heic" alt="" className="img" />
           </Box>
         </Grid>
         
         <Grid className='flex items-center' item xs={12} md={5}>
-            <Box className=' col bg2 flex items-center' sx={{
+            <Box className='whitebg col  flex items-center' sx={{
             
              px:{xs:1,sm:4},py:4,
-              borderRadius:'4px',
+              borderRadius:'0px',
               transform:{md:'translateX(-25%)'},
            }}>
             <Typography
@@ -208,9 +204,9 @@ component={'h1'}
         xs: '2em',
     },
     padding:.5,
-    fontWeight: '900'
+    fontWeight: '500'
 }}>
-Amaria Care for Healthy, Radiant, and Luminous Skin
+Achieve a Brighter, Healthier Tan
 </Typography>
 <Typography
 component={'p'}
@@ -224,7 +220,7 @@ component={'p'}
     padding:.5,
     fontWeight: '300'
 }}>
-Once you give yourself a complete break from chemicals and synthetic ingredients, and use organic products, you can have a beautiful, luminous skin with a couple of minutes of easy daily care. The rest come from eating well, being your authentic self, and honoring what makes you happy.
+Embrace a natural approach to sun-kissed skin with OVA. Our tanning oil’s lightweight, non-greasy texture absorbs quickly, enhancing your tan while keeping your skin smooth and moisturized. Make every sun exposure a chance to shine with confidence and grace.
 </Typography>
             </Box>
         </Grid>
@@ -379,52 +375,29 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
       {/* <HomeProductCollection  products={data}/> */}
 
 
-      {/* <Container  className='flex center wrap items-center row' sx={{py:5,my:8,mx:'auto',maxWidth:'lg',background:'#f4f8fd',}}>
+     <Container  className='flex center wrap bg items-center row'
+      sx={{py:5,my:8,mx:'auto'}}>
         <Box>
-        <Typography sx={{width:'100%',maxWidth:'600px',flex:1,fontSize:{xs:'.95em',sm:'1.19em'},fontWeight:300,color:'#4d555e',mt:2}} className=''>
+        <Typography 
+        sx={{width:'100%',maxWidth:'600px',flex:1,
+        fontSize:{xs:'.95em',sm:'1.19em'},fontWeight:300,color:'white',mt:2}} className=''>
             
-        {text('At AMARIA, we’re committed to sustainability. That’s why we use eco-friendly packaging and support sustainable farming practices to ensure that our products have a minimal impact on the environment.', 'في ترو ناشور بليند، نحن ملتزمون بالاستدامة. لهذا السبب نستخدم تعبئة صديقة للبيئة وندعم ممارسات الزراعة المستدامة لضمان أن منتجاتنا لها تأثير أدنى على البيئة.')}
+        {text(`At OVA, we prioritize purity and performance. Our tanning oil is crafted with 100% natural ingredients, ensuring that every drop delivers the highest quality without synthetic additives.`)}
 
             </Typography>
         </Box>
         
         <Box sx={{ width:{xs:'200px',sm:'200px'},height:{xs:'200px',sm:'200px'},my:1}} className='auto rounded'>
-          <img src="https://funmauj.b-cdn.net/test/928368.jpg" alt="" className="img rounded" />
+          <img src="https://th.bing.com/th/id/OIP.7R2m15k87PZJ4RxKbnL3YAHaEK?rs=1&pid=ImgDetMain" alt="" 
+          style={{    objectPosition: 'left'}}
+          className="img rounded" />
         </Box>
-        </Container>        */}
-    {/* <FullscreenPoster/> */}
+        </Container>    
     {/* <HomeProductsCarousel Collectiontitle={"Browse Our Collections"} delay={3000} data={data?.featuredProducts?.slice(10,18)}/> */}
     {/* <HomeProductsCarousel Collectiontitle={"Browse Our Collections"} delay={3000} data={data?.featuredProducts?.slice(18)}/> */}
 
-      <Container sx={{my:{xs:8,sm:8},pt:{xs:4,sm:2},maxWidth:'lg',mx:'auto'}}>
-
-      <Typography 
-                                className=''
-                                
-                                sx={{
-                                 maxWidth:'600px',
-                                  
-                                  color:'black',fontSize:{xs:'1.2em',
-                                sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'900'}}>
-                             
-                             Why Amaria?
-                                </Typography>
-                                <Box component='div'
-                                className=' '
-                                sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
-                           <p>• Organic, natural, and handmade.</p>
-    <p>• More than 98% vegan and cruelty free.</p>
-    <p>• Intensely rich in nutrients to nourish, restore, and rejuvenate.</p>
-    <p>• Luxurious quality with affordable prices.</p>
-    <p>• Attractive and unique scents.</p>
-    <p>• Suitable for all skin types.</p>
-    <p>• Eco- friendly.</p>
-    <p>• Natural coloring and preservatives.</p>
-
-                                  </Box >
-      </Container>
-
-    <Testimonials/>
+     
+    {/* <Testimonials/> */}
 
     
   </Box>

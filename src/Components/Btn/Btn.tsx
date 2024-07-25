@@ -6,13 +6,13 @@ import React from 'react'
 
 let style1 = {
   color: 'black',
-  background: ' #e1d4c7',
-  border:'1px solid  #e1d4c7',
+  background: ' #c9a45d',
+  border:'1px solid  #c9a45d',
   borderRadius: '7px', 
   transition: 'background 0.3s ease, transform 0.2s ease',
 
   ':hover': {
-      background: '#e1d4c7',
+      background: '#c9a45d',
       color:'black',
  
   },
@@ -26,14 +26,14 @@ let style1 = {
 let style2 = {
   color: 'black',
   background: 'transparent',
-  border: '1px solid  #e1d4c7',
+  border: '1px solid  #c9a45d',
   borderRadius: '7px', 
   // boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
   transition: 'background 0.3s ease, transform 0.2s ease',
 
   ':hover': {
     color:'black',
-      background: '#e1d4c7',
+      background: '#c9a45d',
       transform: 'scale(1.05)',
   },
   display: 'flex',

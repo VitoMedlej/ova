@@ -57,10 +57,10 @@ export default function Navbar() {
     return ( <>
      <Box
      id='navy'
-    className='center auto   absolute   flex'
+    className='center auto  relative     flex'
         sx={{
             zIndex:12,
-            position:'absolute !important',
+            // position:'absolute !important',
 
         flexWrap: 'wrap',
                 width:'100%',
@@ -74,10 +74,10 @@ export default function Navbar() {
         <AppBar
      id='navy2'
 
-    className='center col absolute   flex'
+    className='center col  relative  flex'
 
             sx={{
-                position:'absolute !important',
+                // position:'absolute !important',
 
                 boxShadow:'none',
 
@@ -86,12 +86,13 @@ export default function Navbar() {
                 width:'100%',
             margin: '0 auto',
         }}>
-            <Box className='center text-center bg2' sx={{width:'100%',py:.25}}>
+            <Box className='center text-center bg' sx={{width:'100%',py:.25}}>
                 <Typography className='' component='h1' sx={{color:'#0f0f0f',px:.5,py:.2,fontSize:{xs:'.65em',sm:'.95em'}}}>
                 {`Amaria’s Atelier is located in Beirut`} 
                 </Typography>
             </Box>
-      <Toolbar className='flex relative center items-center' sx={{py:1,px:0,mx:{xs:1},background:'transparent'}}>
+      <Toolbar className='flex relative center items-center'
+       sx={{py:0,px:0,mx:{xs:1},background:'transparent'}}>
         
         <Box
         onClick={()=>router.push('/')}
@@ -99,12 +100,10 @@ export default function Navbar() {
             position:{xs:'relative',sm:'absolute'},
             right:{xs:'0%',sm:'50%'},
         
-        transform:{sm:'translateX(50%)'},width:{xs:'auto',sm:'200px'},height:{xs:'100px',sm:'200px'}}}>
+        transform:{sm:'translateX(50%)'},width:{xs:'auto',sm:'200px'},height:{xs:'100px',sm:'100%'}}}>
             <img
-             src="https://ucarecdn.com/d0533aac-5ae0-4ed5-836f-827bb7428c5a/WhatsApp_Image_20240131_at_151932__1_removebg.png"
-             
-             
-             alt="logo" className="img logo" />
+             src="https://ucarecdn.com/bf3ec202-9afa-4128-a5ee-d6963a5ad711/ovalogo.PNG"
+             alt="logo" className="img logo contain" />
         </Box>
 
 

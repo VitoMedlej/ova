@@ -2,11 +2,11 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Avenir", sans-serif !important;
+  font-family: "Work Sans", sans-serif !important;
 }
 
 * h1, h2, h3, h4, h5, h6, p, button, input, select, textarea, a {
-  font-family: "Avenir", sans-serif !important;
+  font-family: "Work Sans", sans-serif !important;
 }
 
 .emailinput {
@@ -23,7 +23,7 @@ body {
 }
 
 .color3 {
-  color: #e1d4c7 !important;
+  color: #ba6e3e !important;
 }
 
 .topd {
@@ -48,11 +48,11 @@ body {
 }
 
 .bg2 {
-  background: #e1d4c7 !important;
+  background: #ba6e3e !important;
 }
 
 .borderColor {
-  border-color: #ba6e3e !important;
+  border-color: #c9a45d !important;
 }
 
 .borderColor2 {
@@ -68,7 +68,7 @@ body {
 }
 
 .color {
-  color: #ba6e3e !important;
+  color: #c9a45d !important;
 }
 
 .flex {
@@ -77,6 +77,10 @@ body {
 
 .shadow {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.whitebg {
+  background: white;
 }
 
 .limited {
@@ -108,7 +112,7 @@ body {
 }
 
 .bg {
-  background: #ba6e3e !important;
+  background: #c9a45d !important;
 }
 
 .bg3 {
@@ -169,7 +173,7 @@ button[disabled] {
 }
 
 .clr {
-  color: #ba6e3e !important;
+  color: #c9a45d !important;
 }
 
 .clr2 {

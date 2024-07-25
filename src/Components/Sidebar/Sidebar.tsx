@@ -23,7 +23,7 @@ export default function TemporaryDrawer({cates}:{cates:string[] | undefined}) {
   const [localUser,setLocalUser] = useState<{name?:string,email?:string} | null>(null)
 
   const fetchUserAndList = async () => {
-    const user = localStorage.getItem('24j1i2cj4io-dadxzazd213')
+    const user = localStorage.getItem('Bz35b15zs')
     if (user) {
            let parsedUser = JSON.parse(user)
            if (!parsedUser) {return}
@@ -80,6 +80,20 @@ useEffect(()=>{
       <ListItem
           sx={{fontWeight:400}}
 
+          onClick={()=>{router.push(`/`); toggleDrawer(false)}}
+           disablePadding>
+            <ListItemButton>
+            
+                  <Typography component='h1' sx={{fontWeight:600}}>
+              Home
+            </Typography>
+            </ListItemButton>
+  
+
+          </ListItem>
+      <ListItem
+          sx={{fontWeight:400}}
+
           onClick={()=>{router.push(`/collection/products`); toggleDrawer(false)}}
            disablePadding>
             <ListItemButton>
@@ -91,8 +105,22 @@ useEffect(()=>{
   
 
           </ListItem>
+          <ListItem
+          sx={{fontWeight:400}}
+
+          onClick={()=>{router.push(`/about`); toggleDrawer(false)}}
+           disablePadding>
+            <ListItemButton>
+            
+                  <Typography component='h1' sx={{fontWeight:600}}>
+              About
+            </Typography>
+            </ListItemButton>
+  
+
+          </ListItem>
        
-      <NestedMenuAccordion/>
+      {/* <NestedMenuAccordion/> */}
           {/* {
             [
               'Labneh','Keshek',

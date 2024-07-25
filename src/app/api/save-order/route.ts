@@ -12,7 +12,7 @@ export  async function POST(req: NextRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     // Process a POST request
     if (!order) return NextResponse.json({success:false})
-       const insertReq = await client.db("AMARIA").collection("Orders").insertOne(order);
+       const insertReq = await client.db("OVA").collection("Orders").insertOne(order);
        if (insertReq.acknowledged) {         
         console.log('insertReq.acknowledged: ', insertReq.acknowledged);
           // Update stock values for each product in the order
@@ -24,7 +24,7 @@ export  async function POST(req: NextRequest, res: NextApiResponse) {
             }
 
             // Assuming you have a collection named "Products" with stock information
-            const updateStockReq = await client.db("AMARIA").collection("Products").updateOne(
+            const updateStockReq = await client.db("OVA").collection("Products").updateOne(
            
               { _id: new ObjectId(`${_id}`) },
               { $inc: { stock: -Number(qty) } }
