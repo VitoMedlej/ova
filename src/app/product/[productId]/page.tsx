@@ -82,7 +82,7 @@ const Index = () => {
   {data?.product?.images?.length > 0 && data?.product?.images.map((img : string)=>{
     let imageCount = data?.product?.images.length;
     let widthPercentage = imageCount > 0 ? 95 / imageCount : 100;
-    return <Box sx={{width:{xs:`${widthPercentage}%`},height:{xs:'100px',md:'150px'}}}>
+    return <Box key={img} sx={{width:{xs:`${widthPercentage}%`},height:{xs:'100px',md:'150px'}}}>
       <img src={img} alt="" className="img " />
     </Box>
   })}

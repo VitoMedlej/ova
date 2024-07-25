@@ -73,7 +73,7 @@ const PreLoader = ({data,resImages}:any) => {
                                 <Typography 
                                 className=' '
                                 sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
-                       Achieve a golden tan quickly with OVA's 100% natural tanning oil, enriched with Vitamin B and E for deep hydration and long-lasting results. Available in all pharmacies in Lebanon.
+                       {`Achieve a golden tan quickly with OVA's 100% natural tanning oil, enriched with Vitamin B and E for deep hydration and long-lasting results. Available in all pharmacies in Lebanon.`}
 
                                 </Typography>
                            
@@ -103,7 +103,7 @@ const PreLoader = ({data,resImages}:any) => {
                                 <Typography 
                                 className='text-center auto center'
                                 sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
-                           Do you know your skin type? Read more to understand your skin type or contact us for a free consultation with our skin experts.
+                          {` Do you know your skin type? Read more to understand your skin type or contact us for a free consultation with our skin experts.`}
 
                                 </Typography>
 
@@ -170,7 +170,7 @@ component={'p'}
     padding:.5,
     fontWeight: '300'
 }}>
-Transform your tanning routine with OVA Tanning Oil. Crafted from 100% natural ingredients, our formula ensures your skin not only gets a beautiful bronzed glow but also stays nourished and protected. Infused with coconut oil and essential vitamins, our tanning oil delivers deep hydration and a radiant finish.
+{`Transform your tanning routine with OVA Tanning Oil. Crafted from 100% natural ingredients, our formula ensures your skin not only gets a beautiful bronzed glow but also stays nourished and protected. Infused with coconut oil and essential vitamins, our tanning oil delivers deep hydration and a radiant finish.`}
 </Typography>
             </Box>
         </Grid>
@@ -220,7 +220,7 @@ component={'p'}
     padding:.5,
     fontWeight: '300'
 }}>
-Embrace a natural approach to sun-kissed skin with OVA. Our tanning oil’s lightweight, non-greasy texture absorbs quickly, enhancing your tan while keeping your skin smooth and moisturized. Make every sun exposure a chance to shine with confidence and grace.
+`{`Embrace a natural approach to sun-kissed skin with OVA. Our tanning oil’s lightweight, non-greasy texture absorbs quickly, enhancing your tan while keeping your skin smooth and moisturized. Make every sun exposure a chance to shine with confidence and grace.`}`
 </Typography>
             </Box>
         </Grid>
