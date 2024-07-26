@@ -74,8 +74,8 @@ const PreLoader = ({data,resImages}:any) => {
 
                                 </Typography>
 
-                                <Container className='flex row wrap space-between justify-between ' sx={{
-        justifyContent:{xs:'justify-between',sm:'justify-between'},
+                                <Container className='flex row wrap  ' sx={{
+        justifyContent:{xs:'center',sm:'justify-between'},
         mt:2}} maxWidth='lg'>
           
       {
