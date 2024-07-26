@@ -349,7 +349,7 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
         sx={{width:'100%',maxWidth:'600px',flex:1,
         fontSize:{xs:'.95em',sm:'1.19em'},fontWeight:300,color:'white',mt:2}} className=''>
             
-        {text(`At OVA, we prioritize purity and performance. Our tanning oil is crafted with 100% natural ingredients, ensuring that every drop delivers the highest quality without synthetic additives.`)}
+        {text(`Our tanning oil at OVA is a testament to the commitment to purity and performance by Dr. Ramy. Crafted with 100% natural ingredients, every drop of our oil ensures the highest quality without the use of synthetic additives`)}
 
             </Typography>
         </Box>

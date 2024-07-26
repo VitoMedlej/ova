@@ -17,7 +17,7 @@ Enriched with vitamins, our products support skin regeneration and hydration.
 
 Our lightweight formulas provide a non-greasy finish for all-day comfort.
 
-Available in all pharmacies in Lebanon, OVA Skincare is your go-to for premium skincare.
+By Doctor Ramy.
 
 Experience the benefits of natural ingredients without synthetic additives.`
 
