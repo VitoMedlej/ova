@@ -12,7 +12,7 @@ const sm = [
     },
     {
       Icon:`https://cdn-icons-png.flaticon.com/128/174/174848.png`,
-      href:'https://www.facebook.com/people/amariaorganicbeauty/100078718512812/'
+      href:'https://www.facebook.com/profile.php?id=100091776934601'
     },
     {Icon:'https://cdn-icons-png.flaticon.com/128/15713/15713434.png',href:'https://wa.me/+96171213284'},
   

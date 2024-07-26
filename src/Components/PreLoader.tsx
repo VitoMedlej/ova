@@ -18,47 +18,14 @@ import FullscreenPoster from './FullscreenPoster/FullscreenPoster'
 const PreLoader = ({data,resImages}:any) => {
   const router= useRouter();
   const {text} = useLanguage()
-  const textsArray = [
-    {
-      id: 1,
-      title: text('100% Natural', '100٪ طبيعي'),
-      desc: text(
-        'Our honey is sourced from the purest natural environments, ensuring 100% natural goodness without any artificial additives or preservatives.',
-        'عسلنا يأتي من أجواء طبيعية نقية، مما يضمن لك الخير الطبيعي بنسبة 100٪ دون أي إضافات صناعية أو مواد حافظة.'
-      ),
-    },
-    {
-      id: 2,
-      title: text('Purity and Potency', 'النقاء والفعالية'),
-      desc: text(
-        'We carefully select our beehives in pristine locations, ensuring the purity and potency of our honey, so you experience the best benefits.',
-        'نحن نختار خلايانا بعناية في أماكن نقية، مما يضمن نقاء وفعالية عسلنا، لتجربة فوائد متميزة.'
-      ),
-    },
-    {
-      id: 3,
-      title: text('Expertly Formulated', 'صياغة خبيرة'),
-      desc: text(
-        'Our honey is expertly crafted by our team of experienced beekeepers, ensuring a premium product that delivers superior taste and quality.',
-        'تم تصنيع عسلنا بخبرة من قبل فريق من مربي النحل ذوي الخبرة، مما يضمن لك منتجًا ممتازًا يقدم طعمًا وجودة فائقين.'
-      ),
-    },
-    {
-      id: 4,
-      title: text('Great Value', 'قيمة عظيمة'),
-      desc: text(
-        'AMARIA honey provides great value for your health, offering the highest quality honey at an affordable price for you and your family.',
-        'عسل بي أورجانيك يقدم قيمة عظيمة لصحتك، حيث يوفر عسل عالي الجودة بسعر معقول لك ولعائلتك.'
-      ),
-    },
-  ];
+
   
 
   return (
 
         <Box >
       <MainCarousel res={resImages} />
-      <Grid className='center auto' sx={{px:{xs:1,sm:0},py:{xs:8},maxWidth:'lg'}}>
+      <Grid className='center auto' sx={{px:{xs:1},py:{xs:8},maxWidth:'lg'}}>
         <Typography 
                                 className=''
                                 
@@ -98,12 +65,12 @@ const PreLoader = ({data,resImages}:any) => {
                                   color:'black',fontSize:{xs:'1.2em',
                                 sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'500'}}>
                              
-                             Get the right products for your skin and your environment.
+                            The Benefits of Radiant Skin with Our Luxury Tan Oil
                                 </Typography>
                                 <Typography 
                                 className='text-center auto center'
                                 sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
-                          {` Do you know your skin type? Read more to understand your skin type or contact us for a free consultation with our skin experts.`}
+                          {` Our luxury tan oil not only provides a beautiful, even tan but also deeply hydrates, protects, and nourishes your skin with its blend of natural oils and vitamins.`}
 
                                 </Typography>
 
@@ -113,19 +80,19 @@ const PreLoader = ({data,resImages}:any) => {
           
       {
         [{
-          img:`https://helwe.com/cdn/shop/files/3_36e07bc7-d063-47e6-966b-62d9140e0007_295x.png?v=1662366307`,
-          title:'Dry skin'
+          img:`https://www.honest.com/dw/image/v2/BDBW_PRD/on/demandware.static/-/Sites-HC-master-catalog/default/dwbfc85467/images/large/Deep-Hydration-Face-Cream/Restage-DeepHydrationFaceCream/LizzyApply.jpg?sw=2000&sh=2000&sm=fit`,
+          title:'Deep Hydration'
         },
         {
-          img:`https://helwe.com/cdn/shop/files/2_c7d2e24e-1a0b-4192-a4d1-01a9f6b928b6_295x.png?v=1662366307`,
-          title:'Combination Skin'
+          img:`https://ucarecdn.com/80e040ce-31db-49e7-8919-c5a7de503792/447768081_17906154572975697_2705445780309916146_n.jpg`,
+          title:'Even Tan'
         },
         {
-          img:`https://helwe.com/cdn/shop/files/1_c4b8cd92-2c53-40e8-93f7-163d7f7fd928_295x.png?v=1662366307`,
-          title:'Oily Skin'
+          img:`https://ucarecdn.com/9d7e4ddc-928b-4fd1-bfcd-8b49d3980e54/449262677_17908739711975697_3059468006304686201_n.jpg`,
+          title:'Packed with vitamins'
         },
-        {img:'https://helwe.com/cdn/shop/files/4_e2a4d56a-01b1-4e11-bd30-4e710dea7dba_295x.png?v=1662366493',
-      title:'Know your skin'}
+        {img:'https://goop-img.com/wp-content/uploads/2022/10/Do-Antioxidants-Really-Boost-Glowing-Skin_TRU576438-1.jpg',
+      title:'Delightful Scent'}
       ].map(i=>{
         return <CategoryCard key={i} categoryName={i?.title} imageUrl={i?.img}/>
         
@@ -176,7 +143,7 @@ component={'p'}
         </Grid>
         <Grid item xs={12} md={7}>
           <Box className='auto' sx={{width:'95%',height:{xs:'100%',sm:'500px'}}}>
-            <img style={{borderRadius:'0px'}} src="https://ucarecdn.com/b40a6c28-337e-4ee3-b675-87eb94bbb9cf/413040906_17962573337695373_7471455854767187837_n.jpg" alt="" className="img" />
+            <img style={{borderRadius:'0px'}} src="https://www.bp.com/content/dam/bp/country-sites/en_ae/arabia_lubricants/home/technical-services/used-oil-analysis-lab-test.jpg" alt="" className="img" />
           </Box>
         </Grid>
       </Grid>
@@ -184,7 +151,7 @@ component={'p'}
       <Grid container sx={{my:{xs:6,sm:12},maxWidth:'lg',mx:'auto'}}>
       <Grid item xs={12} md={7}>
           <Box className='auto' sx={{width:'95%',height:{xs:'100%',sm:'500px'}}}>
-            <img style={{borderRadius:'0px'}} src="https://ucarecdn.com/23fa0f10-9dce-4561-9f20-ac6a9045a943/422329877_914052226799805_3834460622772197607_n.heic" alt="" className="img" />
+            <img style={{borderRadius:'0px'}} src="https://ucarecdn.com/cb6cea1c-bb7a-47b5-ba72-e2aad721f319/449458954_17909004821975697_8017125191943625170_n.jpg" alt="" className="img" />
           </Box>
         </Grid>
         
@@ -386,7 +353,6 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
 
             </Typography>
         </Box>
-        
         <Box sx={{ width:{xs:'200px',sm:'200px'},height:{xs:'200px',sm:'200px'},my:1}} className='auto rounded'>
           <img src="https://th.bing.com/th/id/OIP.7R2m15k87PZJ4RxKbnL3YAHaEK?rs=1&pid=ImgDetMain" alt="" 
           style={{    objectPosition: 'left'}}
@@ -396,7 +362,6 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
     {/* <HomeProductsCarousel Collectiontitle={"Browse Our Collections"} delay={3000} data={data?.featuredProducts?.slice(10,18)}/> */}
     {/* <HomeProductsCarousel Collectiontitle={"Browse Our Collections"} delay={3000} data={data?.featuredProducts?.slice(18)}/> */}
 
-     
     {/* <Testimonials/> */}
 
     

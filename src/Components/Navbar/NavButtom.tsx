@@ -52,23 +52,31 @@ COLLECTION
 
 
 {
-   ['body care', 'facial care',  'hair care','lip care', 'home care'].map(i=>{
-        return <Link key={i} className='black decor-none ' href={`/${i.toLocaleLowerCase()}/products`}>
-
-        <Typography 
-        component='h1'
-        className=' cursor center flex gap1 black decor-none captialize'
-        id="button"
-        sx={{width:'max-content',
-        mx:'1em',
-        alignItems: 'center',
-        fontWeight:600,fontSize:{xs:'.86em',sm:'.8em'}}}>
-        {i.toUpperCase()}
-        </Typography>
+   ['Home','Collection','About','Contact'].map(i=>{
+        let href;
+        if (i === 'Home') {
+            href = '/';
+        } else if (i === 'Collection') {
+            href = '/collection/products';
+        } else if (i === 'Contact') {
+            href = `https://wa.me/${process.env.NEXT_PUBLIC_WA}`;
+        } else {
+            href = `/${i.toLowerCase()}`;
+        }
+        return <Link key={i} className='black decor-none' href={href}>
+            <Typography 
+            component='h1'
+            className='cursor center flex gap1 black decor-none capitalize'
+            id="button"
+            sx={{width:'max-content',
+            mx:'1em',
+            alignItems: 'center',
+            fontWeight:600,fontSize:{xs:'.86em',sm:'.8em'}}}>
+            {i.toUpperCase()}
+            </Typography>
         </Link>
     })
 }
-
 {/* <Link className='black decor-none ' href={`/organic herbs/products`}>
 
 <Typography 

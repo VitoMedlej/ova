@@ -131,7 +131,7 @@ export default function TemporaryDrawer() {
                         sx={{mx:1,color:'black',border:'none',':hover':{background:'white',color:'black'}}} 
                         onClick={()=>{setCartOpen(false),router.push('/cart')}}
                         v2={true} >
-                        View Cart Page
+                        View Bag Page
                         </Btn>
                     </Box>
 

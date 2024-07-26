@@ -23,8 +23,8 @@ const ProductCollection = ({sx,delay,Collectiontitle,data,setQuickView} : {
         <Box
             sx={{
             maxWidth: 'lg',
-            width :'99%',
-            margin: '0 auto',
+            // width :'99%',
+            // margin: '0 auto',
             // my: '3em',
             mt:'2em',
             mb:'3em',

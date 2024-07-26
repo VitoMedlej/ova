@@ -16,11 +16,14 @@ const Preloader3 = ({res}:{res:any}) => {
     const router = useRouter()
     const [imgs,setImgs] = useState([
         {
+            img:`https://ucarecdn.com/3a7956fd-95ab-48c7-8345-d2a3d79eb1b0/441899267_17906539679975697_9032060344798531297_n.jpg`
+        },
+        {
             img : 'https://ucarecdn.com/992b1682-7acb-4d1a-bbe3-6cd86a374882/ovapic.jpg',
             position:'top',
         },
       {
-        img: 'https://helwe.com/cdn/shop/files/1_e0850903-aa85-4de4-b1bb-760310fd7813_1200x.png?v=1688387749',
+        img: 'https://images.pexels.com/photos/269583/pexels-photo-269583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         position:'',
     }
      ])
@@ -108,7 +111,7 @@ const Preloader3 = ({res}:{res:any}) => {
                                 sx={{
                                  maxWidth:'600px',
                                   
-                                  color:'black',fontSize:{xs:'1.2em',
+                                  color:'black',fontSize:{xs:'1em',
                                   textTransform:'uppercase',
                                 sm:'1.2em',md:'1.165em',lg:'1.5em'},fontWeight:'500'}}>
                              
@@ -126,7 +129,7 @@ const Preloader3 = ({res}:{res:any}) => {
                                 onClick={()=>redir()}
                                 
                                 className='   ' sx={{mx:'0',mt:1}}>
-                                Browse Collection
+                                Shop Now
 
                                 </Btn>
                             
@@ -135,7 +138,7 @@ const Preloader3 = ({res}:{res:any}) => {
                             </Container>
                             <img
             
-                                className={`img   
+                                className={`img cover   
                                 
                                 ${item?.position}d`}
                                 // ${item?.className}

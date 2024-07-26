@@ -10,11 +10,12 @@ const CategoryCard = ({ imageUrl, categoryName } : any) => {
   return (
     <Card
     sx={{boxShadow:'none',
-    width:{xs:'49%',sm:'auto'},
-    mt:2,mx:0,borderRadius:'4px',border:'none', maxWidth: 345 }}>
+    width:{xs:'98%',sm:'48%', md:'23%'},
+    mt:{xs:0,sm:2},mx:0,borderRadius:'4px',border:'none', maxWidth: 280 }}>
       <CardMedia
         component="img"
         height="340"
+        width="280"
         sx={{boxShadow:'none',border:'none',borderRadius:'4px',}}
         image={imageUrl}
         alt={categoryName}

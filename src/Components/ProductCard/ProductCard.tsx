@@ -45,13 +45,14 @@ const ProductCard = ({
         <Box
             className='  trans cardproduct center text-center'
             sx={{
-            boxShadow: `rgba(0, 0, 0, 0.05) 0px 0px 0px 1px`,
+            // boxShadow: `rgba(0, 0, 0, 0.05) 0px 0px 0px 1px`,
             // border : '1px solid #000000a',
             py: 1,
             margin: '0em auto',
             my:1,
             borderRadius: '5px',
-            minWidth: {xs:'98%'},
+            // minWidth: {xs:'98%'},
+            maxWidth: {xs:'300px'},
             width: width
                 ? width
                 : {
@@ -115,7 +116,7 @@ const ProductCard = ({
     )}
 </Typography>
 <Btn 
-            className='cursor black clr  gap1'
+            className='cursor black   gap1'
                 
                      onClick={()=>
                         sizes &&  sizes?.length > 0 ? 
@@ -125,7 +126,7 @@ const ProductCard = ({
                         addToCart(1,_id,{title,category,img:images[0],_id,price:newPrice?Number(newPrice):price},true)}
                     v2
                     sx={{
-                        // border:'1px solid transparent',
+                        border:'1px solid ',
                         ':hover':{background:'transparent',border:'1px solid '},
                         color:'black !important',
                         margin:'0 '
@@ -135,9 +136,9 @@ const ProductCard = ({
                 }}>
                     <Box sx={{
                         
-                        color:'black !important',}} className="flex clr ">
+                        color:'black !important',}} className="flex  ">
 
-                    {sizes && sizes?.length > 0 ? 'Select Size' :  'ADD'}
+                    {sizes && sizes?.length > 0 ? 'Select Size' :  'add to bag'}
                     <BiCartAdd fontSize='20px'/>
                     </Box>
                 </Btn>
