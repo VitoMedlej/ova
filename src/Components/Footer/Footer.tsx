@@ -22,7 +22,7 @@ const Footer = () => (
             </Link>
           </div>
           <Typography component='h1' sx={{ fontSize: '.95em',color:"2b2b2b" }}  className='footer-p '>
-          OVA Tanning Oil is a 100% natural product that keeps your skin healthy and hydrated while protecting it from harmful UV rays. Enriched with coconut oil, it leaves your body with a bronzed, smooth tan and gives your skin the radiance it needs.
+          OVA Skin Care is a Lebanese brand offering premium skincare products crafted with organic and natural ingredients. Our expert-formulated range is designed to nourish, protect, and enhance your skin’s natural glow, providing effective solutions for all skin types.
           </Typography>
 
           {/* <ul className="site-footer__social-networks">

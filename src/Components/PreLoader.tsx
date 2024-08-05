@@ -40,7 +40,7 @@ const PreLoader = ({data,resImages}:any) => {
                                 <Typography 
                                 className=' '
                                 sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
-                       {`Achieve a golden tan quickly with OVA's 100% natural tanning oil, enriched with Vitamin B and E for deep hydration and long-lasting results. Available in all pharmacies in Lebanon.`}
+                       {` At OVA Skin Care, we are dedicated to celebrating natural beauty through the finest skincare products. Founded in Lebanon, our brand is inspired by the rich heritage and natural resources of the Mediterranean.`}
 
                                 </Typography>
                            
@@ -64,13 +64,13 @@ const PreLoader = ({data,resImages}:any) => {
                                     px:1,
                                   color:'black',fontSize:{xs:'1.2em',
                                 sm:'1.4em',md:'1.565em',lg:'2em'},fontWeight:'500'}}>
-                             
-                            The Benefits of Radiant Skin with Our Luxury Tan Oil
+
+The Benefits of OVA Skin Care Products
                                 </Typography>
                                 <Typography 
                                 className='text-center auto center'
-                                sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'800px'}}>
-                          {` Our luxury tan oil not only provides a beautiful, even tan but also deeply hydrates, protects, and nourishes your skin with its blend of natural oils and vitamins.`}
+                                sx={{color:'black',fontSize:{xs:'.85em',sm:'.87em'},mt:1,px:1,maxWidth:'800px'}}>
+                          {`Our lab-made products, crafted by Dr. Ramy, offer therapeutic, organic, and natural solutions. This dermatologist-approved collection deeply nourishes, protects, and revitalizes your skin.`}
 
                                 </Typography>
 
@@ -123,7 +123,7 @@ component={'h1'}
     padding:.5,
     fontWeight: '500'
 }}>
-Elevate Your Glow with OVA Tanning Oil
+Unveil Radiant Skin with OVA Lab-Made Formulas
 </Typography>
 <Typography
 component={'p'}
@@ -137,7 +137,7 @@ component={'p'}
     padding:.5,
     fontWeight: '300'
 }}>
-{`Transform your tanning routine with OVA Tanning Oil. Crafted from 100% natural ingredients, our formula ensures your skin not only gets a beautiful bronzed glow but also stays nourished and protected. Infused with coconut oil and essential vitamins, our tanning oil delivers deep hydration and a radiant finish.`}
+{`Our dermatologist-approved formulas provide deep hydration, effective protection, and lasting nourishment. From hyaluronic acid with 24k gold water to specialized serums, OVA ensures your skin stays radiant and healthy. Proudly made in Lebanon.`}
 </Typography>
             </Box>
         </Grid>
@@ -150,8 +150,8 @@ component={'p'}
 
       <Grid container sx={{my:{xs:6,sm:12},maxWidth:'lg',mx:'auto'}}>
       <Grid item xs={12} md={7}>
-          <Box className='auto' sx={{width:'95%',height:{xs:'100%',sm:'500px'}}}>
-            <img style={{borderRadius:'0px'}} src="https://ucarecdn.com/cb6cea1c-bb7a-47b5-ba72-e2aad721f319/449458954_17909004821975697_8017125191943625170_n.jpg" alt="" className="img" />
+          <Box className='auto' sx={{width:'95%',height:{xs:'400px',sm:'500px'}}}>
+            <img style={{borderRadius:'0px'}} src="https://images.pexels.com/photos/3762873/pexels-photo-3762873.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" className="img" />
           </Box>
         </Grid>
         
@@ -173,7 +173,7 @@ component={'h1'}
     padding:.5,
     fontWeight: '500'
 }}>
-Achieve a Brighter, Healthier Tan
+Elevate Your Skincare Routine
 </Typography>
 <Typography
 component={'p'}
@@ -187,7 +187,7 @@ component={'p'}
     padding:.5,
     fontWeight: '300'
 }}>
-`{`Embrace a natural approach to sun-kissed skin with OVA. Our tanning oil’s lightweight, non-greasy texture absorbs quickly, enhancing your tan while keeping your skin smooth and moisturized. Make every sun exposure a chance to shine with confidence and grace.`}`
+{`OVA Skin Care delivers a unique blend of organic and natural ingredients that work in harmony to enhance your skin's health. Our products are designed to offer deep hydration, effective protection, and visible rejuvenation.`}
 </Typography>
             </Box>
         </Grid>
@@ -349,7 +349,7 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
         sx={{width:'100%',maxWidth:'600px',flex:1,
         fontSize:{xs:'.95em',sm:'1.19em'},fontWeight:300,color:'white',mt:2}} className=''>
             
-        {text(`Our tanning oil at OVA is a testament to the commitment to purity and performance by Dr. Ramy. Crafted with 100% natural ingredients, every drop of our oil ensures the highest quality without the use of synthetic additives`)}
+        {text(`OVA Skin Care brings you a sophisticated range of skincare products that combine the best of organic and natural ingredients. Our brand is dedicated to enhancing your skin’s health and radiance with formulations designed for every skin type.`)}
 
             </Typography>
         </Box>

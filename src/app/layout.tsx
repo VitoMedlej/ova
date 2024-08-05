@@ -8,8 +8,8 @@ import QuickCart from '@/Components/Shared/QuickCart/QuickCart'
 import ContextWrapper from '@/context/Contexts'
 
 export const metadata = {
-    title: 'OVA Skincare - 100% Natural Tanning Oil | Lebanon',
-    description: `Discover OVA Skincare's 100% natural tanning oil enriched with Vitamin B and E. Achieve a deep, even tan with our dermatologist-approved formula. Available in all pharmacies in Lebanon.`,
+    title: 'OVA Skin Care – Natural Skincare Products in Lebanon',
+    description: `Discover the best natural skincare products in Lebanon with OVA Skin Care. Shop hydrating serums, balancing toners, and purifying masks for all skin types.`,
     icons: {
         icon: `https://ucarecdn.com/bf3ec202-9afa-4128-a5ee-d6963a5ad711/ovalogo.PNG`
     }

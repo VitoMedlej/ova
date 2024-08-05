@@ -88,7 +88,7 @@ export default function Navbar() {
         }}>
             <Box className='center text-center bg' sx={{width:'100%',py:.25}}>
                 <Typography className='' component='h1' sx={{color:'#0f0f0f',px:.5,py:.2,fontSize:{xs:'.65em',sm:'.95em'}}}>
-                {`VIP Tanning Oil & Medical Skin Care | Made In Lebanon`} 
+                {`VIP Lab-Made & Medical Skin Care Products | Made In Lebanon`} 
                 </Typography>
             </Box>
       <Toolbar className='flex relative center items-center'

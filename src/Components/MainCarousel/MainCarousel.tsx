@@ -16,13 +16,28 @@ const Preloader3 = ({res}:{res:any}) => {
     const router = useRouter()
     const [imgs,setImgs] = useState([
         {
-            img: `https://ucarecdn.com/1deda759-6d5f-4999-b394-27bf3fbd85af/mm2.jpg`
+            img: `https://images.pexels.com/photos/4031436/pexels-photo-4031436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
         },
+        // {
+        //     img: `https://ucarecdn.com/1deda759-6d5f-4999-b394-27bf3fbd85af/mm2.jpg`
+        // },
         {
             img: `https://ucarecdn.com/ecc189e8-0484-47a1-bc4c-55a2fc094f4c/mm8.jpg`
         },
         {
+            img: `https://ucarecdn.com/173ac323-8645-43f4-8079-0f8a0612f764/mm1.jpg`
+        },
+        {
+            img: `https://images.pexels.com/photos/8325971/pexels-photo-8325971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+        },
+        {
+            img: `https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+        },
+        {
             img: `https://ucarecdn.com/7516192a-e6b7-4c6d-bee0-baa0f2540e02/mm9.jpg`
+        },
+        {
+            img: `https://images.pexels.com/photos/7020085/pexels-photo-7020085.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load`
         },
     {
         img: `https://ucarecdn.com/5546c7dd-2df1-4786-903f-2d24a616372a/mm4.jpg`
@@ -36,9 +51,7 @@ const Preloader3 = ({res}:{res:any}) => {
     {
         img: `https://ucarecdn.com/7c227b6c-5aa7-43fd-a3df-e38fefb6a4f9/mm7.jpg`
     },
-   {
-        img: `https://ucarecdn.com/173ac323-8645-43f4-8079-0f8a0612f764/mm1.jpg`
-    },
+
       {
         img: 'https://images.pexels.com/photos/269583/pexels-photo-269583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         position:'',
@@ -119,6 +132,8 @@ const Preloader3 = ({res}:{res:any}) => {
                                 mx: {xs:1},
                                 px:3,
                                 py:3,
+                                border:'1px solid #00000024',
+
                                 borderRadius:'0px',
                                 zIndex:123456,
                                 position:'absolute'}}>
@@ -128,11 +143,12 @@ const Preloader3 = ({res}:{res:any}) => {
                                 sx={{
                                  maxWidth:'600px',
                                   
-                                  color:'black',fontSize:{xs:'1em',
+                                  color:'black',fontSize:{xs:'.9em',
                                   textTransform:'uppercase',
-                                sm:'1.2em',md:'1.165em',lg:'1.5em'},fontWeight:'500'}}>
+                                sm:'1em',md:'1.065em',lg:'1.15em'},fontWeight:'500'}}>
                              
-                             Achieve a Radiant Glow with OVA Skincare
+                             {/* Achieve a Radiant Glow with OVA Skincare */}
+                             Finest products crafted with love and care, to enhance your natural glow
                                 </Typography>
                                 {/* <Typography 
                                 className=' '
@@ -155,7 +171,7 @@ const Preloader3 = ({res}:{res:any}) => {
                             </Container>
                             <img
             
-                                className={`img cover   
+                                className={`img contain   
                                 
                                 ${item?.position}d`}
                                 // ${item?.className}
