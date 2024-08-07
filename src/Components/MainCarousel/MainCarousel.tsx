@@ -19,7 +19,8 @@ const Preloader3 = ({res}:{res:any}) => {
             [
 
                 {
-                    img: `https://ucarecdn.com/173ac323-8645-43f4-8079-0f8a0612f764/mm1.jpg`
+                    img: `https://ucarecdn.com/173ac323-8645-43f4-8079-0f8a0612f764/mm1.jpg`,
+                    position:''
                 },
         {
             img: `https://images.pexels.com/photos/4031436/pexels-photo-4031436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
