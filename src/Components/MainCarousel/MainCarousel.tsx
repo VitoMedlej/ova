@@ -14,7 +14,13 @@ import Btn from '../Btn/Btn';
 
 const Preloader3 = ({res}:{res:any}) => {
     const router = useRouter()
-    const [imgs,setImgs] = useState([
+    const [imgs,setImgs] = useState(
+    
+            [
+
+                {
+                    img: `https://ucarecdn.com/173ac323-8645-43f4-8079-0f8a0612f764/mm1.jpg`
+                },
         {
             img: `https://images.pexels.com/photos/4031436/pexels-photo-4031436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
         },
@@ -24,9 +30,7 @@ const Preloader3 = ({res}:{res:any}) => {
         {
             img: `https://ucarecdn.com/ecc189e8-0484-47a1-bc4c-55a2fc094f4c/mm8.jpg`
         },
-        {
-            img: `https://ucarecdn.com/173ac323-8645-43f4-8079-0f8a0612f764/mm1.jpg`
-        },
+     
         {
             img: `https://images.pexels.com/photos/8325971/pexels-photo-8325971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
         },
@@ -52,11 +56,12 @@ const Preloader3 = ({res}:{res:any}) => {
         img: `https://ucarecdn.com/7c227b6c-5aa7-43fd-a3df-e38fefb6a4f9/mm7.jpg`
     },
 
-      {
-        img: 'https://images.pexels.com/photos/269583/pexels-photo-269583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        position:'',
-    }
-     ])
+    //   {
+    //     img: 'https://images.pexels.com/photos/269583/pexels-photo-269583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    //     position:'',
+    // }
+     ]
+    )
      const redir = () => {
         router.push('/collection/products')
         // console.log('abc')
@@ -80,10 +85,10 @@ const Preloader3 = ({res}:{res:any}) => {
             maxWidth:'none',
             // maxWidth: 'lg',
             minHeight:{xs:'500px',sm:'500px',lg:'600px'},
-            maxHeight:{sm:'80vh',md:'600px',lg:'80vh'},
+            // maxHeight:{sm:'100vh',md:'600px',lg:'80vh'},
             margin: '0 auto',
          
-            height : {xs:'80vh',sm:'600px',md:'80vh'},
+            // height : {xs:'80vh',sm:'600px',md:'80vh'},
              
             display: {
                 xs: 'flex'
@@ -111,15 +116,29 @@ const Preloader3 = ({res}:{res:any}) => {
                         <Box
                             sx={{
                                 position:'relative',
-                                height: '80vh',
+                                // height: '80vh',
                             width:'100%'
                         }}>
-                        <Container className='   absolute ' 
+                            <Box sx={{height:{xs:'500px'}}}>
+
+                            <img
+            
+                                className={`img contain   
+                                
+                                ${item?.position}d`}
+                                // ${item?.className}
+                                src={`${item.img} `}
+                                alt="Main Carousel Image"/>
+           
+           </Box>
+
+
+           <Container className='    ' 
                         
                         
                         sx={{
                             background: '#ffffffed',
-                            transform:'translateY(-70%)',
+                            // transform:'translateY(-70%)',
                             top:{xs:'65%',sm:'70%'},
 
                           
@@ -136,7 +155,8 @@ const Preloader3 = ({res}:{res:any}) => {
 
                                 borderRadius:'0px',
                                 zIndex:123456,
-                                position:'absolute'}}>
+                                // position:'absolute'
+                                }}>
                                 <Typography 
                                 className=''
                                 
@@ -169,15 +189,7 @@ const Preloader3 = ({res}:{res:any}) => {
                                 </Box>
                             </Box>
                             </Container>
-                            <img
-            
-                                className={`img contain   
-                                
-                                ${item?.position}d`}
-                                // ${item?.className}
-                                src={`${item.img} `}
-                                alt="Main Carousel Image"/>
-           
+
                         </Box>
                     </SwiperSlide>
                 })

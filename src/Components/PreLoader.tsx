@@ -49,7 +49,6 @@ const PreLoader = ({data,resImages}:any) => {
     
       <HomeProductsCarousel  data={data} Collectiontitle={''} delay={0}/>
 
-      <Perks/>
       
 
       <Container className='flex col ' sx={{
@@ -84,8 +83,8 @@ The Benefits of OVA Skin Care Products
           title:'Deep Hydration'
         },
         {
-          img:`https://ucarecdn.com/80e040ce-31db-49e7-8919-c5a7de503792/447768081_17906154572975697_2705445780309916146_n.jpg`,
-          title:'Even Tan'
+          img:`https://images.pexels.com/photos/3825578/pexels-photo-3825578.jpeg?auto=compress&cs=tinysrgb&w=600`,
+          title:'Crafted in Labs'
         },
         {
           img:`https://ucarecdn.com/9d7e4ddc-928b-4fd1-bfcd-8b49d3980e54/449262677_17908739711975697_3059468006304686201_n.jpg`,
@@ -341,8 +340,9 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
 
       {/* <HomeProductCollection  products={data}/> */}
 
+      <Perks/>
 
-     <Container  className='flex center wrap bg items-center row'
+     {/* <Container  className='flex center wrap bg items-center row'
       sx={{py:5,my:8,mx:'auto'}}>
         <Box>
         <Typography 
@@ -358,7 +358,7 @@ onClick={()=>router.push(`${'circut machines'.replace(/ /g, '-').toLocaleLowerCa
           style={{    objectPosition: 'left'}}
           className="img rounded" />
         </Box>
-        </Container>    
+        </Container>     */}
     {/* <HomeProductsCarousel Collectiontitle={"Browse Our Collections"} delay={3000} data={data?.featuredProducts?.slice(10,18)}/> */}
     {/* <HomeProductsCarousel Collectiontitle={"Browse Our Collections"} delay={3000} data={data?.featuredProducts?.slice(18)}/> */}
 
