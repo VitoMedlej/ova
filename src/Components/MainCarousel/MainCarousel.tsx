@@ -25,7 +25,6 @@ const Preloader3 = ({res}:{res:any}) => {
     useEffect(() => {
         console.log('res: ', res);
     if (res  && res?.length > 0) {
-        console.log('res?.MainCarousel: ', res);
         // console.log('res: ', );
         setImgs(res)
     }

@@ -20,7 +20,7 @@ export default function App({images}:{images:string[] | []| undefined}) {
       <Swiper
         spaceBetween={30}
         effect={"fade"}
-        speed={4000}
+        speed={1000}
         autoplay={
           {delay:3000}
         }

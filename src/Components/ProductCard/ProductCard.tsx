@@ -48,11 +48,12 @@ const ProductCard = ({
             // boxShadow: `rgba(0, 0, 0, 0.05) 0px 0px 0px 1px`,
             // border : '1px solid #000000a',
             py: 1,
+            mx:1,
             margin: '0em auto',
             my:1,
             borderRadius: '5px',
             // minWidth: {xs:'98%'},
-            maxWidth: {xs:'300px'},
+            maxWidth: {xs:'400px'},
             width: width
                 ? width
                 : {
@@ -65,15 +66,15 @@ const ProductCard = ({
             className='cursor auto'
                onClick={() => router.push(`/product/${_id}`)}
             sx={{
-                width:{xs:'98%',sm:'100%',md:'auto'},
-                height: height || {xs:'350px',sm:'350px',md:'400px'}
+                width:{xs:'100%',sm:'100%',md:'auto'},
+                height: height || {xs:'350px',sm:'450px',md:'400px'}
             }}>
                 <img
                     src={images
                     ? images[0]
                     : ''}
                     alt="Prdouct image"
-                    className="img contain"/>
+                    className="img cover"/>
             </Box>
             <Divider></Divider>
             

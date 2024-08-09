@@ -30,7 +30,8 @@ function getStepContent(step: number,setInfo:any,handleChange:any,info:any,setAc
     case 1:
       return <ReviewForm setActiveStep={setActiveStep} />;
     default:
-      throw new Error('Unknown step');
+   
+      return <></>
   }
 }
 

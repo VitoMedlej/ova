@@ -32,27 +32,28 @@ const SwiperCarousel = ({data, delay} : {
               }}
              
               autoplay={{
-                delay:  delay || 1000,
+                delay:  delay || 4000,
                 disableOnInteraction: true,
               }}
+              speed={1200}
               navigation={false}
             spaceBetween={10}
-            slidesPerView={1}
-            slidesPerGroup={1}
+            slidesPerView={2}
+            slidesPerGroup={2}
             modules={[FreeMode,Autoplay, Pagination]}
             breakpoints={{
                 200 : {
                     slidesPerView:1,
                 },
-                540: {
-                    slidesPerView: 1,
+                640: {
+                    slidesPerView: 2,
                   },
                   
                   1024: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                   },
                   1640: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                   },
                 
                
@@ -73,8 +74,6 @@ const SwiperCarousel = ({data, delay} : {
                 newPrice={item?.newPrice}
 
                         inStock={item?.inStock}
-                            height={'400px'}
-                            width='100%'
                             title={item.title}
                             images={item.images}
                             price={item.price}

@@ -142,7 +142,11 @@ export async function GET(req : NextRequest, res : NextApiResponse) {
       });
       console.log('products: ', products?.length);
     if (!products || products?.length < 1  ) {
-      throw 'ERROR: Could not find any products'
+      // throw 'ERROR: Could not find any products'
+      return NextResponse.json({
+        success: false,
+        data: null
+    });
     }
     return NextResponse.json({
         success: true,
