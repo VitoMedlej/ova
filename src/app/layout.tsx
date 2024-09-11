@@ -11,7 +11,7 @@ export const metadata = {
     title: 'OVA Skin Care – Natural Skincare Products in Lebanon',
     description: `Discover the best natural skincare products in Lebanon with OVA Skin Care. Shop hydrating serums, balancing toners, and purifying masks for all skin types.`,
     icons: {
-        icon: `https://ucarecdn.com/bf3ec202-9afa-4128-a5ee-d6963a5ad711/ovalogo.PNG`
+        icon: `https://ucarecdn.com/aaf38863-65e4-473d-8764-c7e639496413/ovalogo.PNG`
     }
 }
 

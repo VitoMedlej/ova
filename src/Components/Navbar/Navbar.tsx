@@ -102,7 +102,7 @@ export default function Navbar() {
         
         transform:{sm:'translateX(50%)'},width:{xs:'auto',sm:'200px'},height:{xs:'100px',sm:'100%'}}}>
             <img
-             src="https://ucarecdn.com/bf3ec202-9afa-4128-a5ee-d6963a5ad711/ovalogo.PNG"
+             src={"https://ucarecdn.com/aaf38863-65e4-473d-8764-c7e639496413/ovalogo.PNG"}
              alt="logo" className="img logo contain" />
         </Box>
 

@@ -27,7 +27,7 @@ const Index = () => {
     <Container maxWidth='lg' className='' sx={{mx:'auto',mt:2,py:4}}>
          
         <Box sx={{width:'100%',height:'200px'}}>
-            <img src={`https://ucarecdn.com/bf3ec202-9afa-4128-a5ee-d6963a5ad711/ovalogo.PNG`} alt="" className={`img contain`} />
+            <img src={`https://ucarecdn.com/aaf38863-65e4-473d-8764-c7e639496413/ovalogo.PNG`} alt="" className={`img contain`} />
         </Box>
     
         <Box sx={{my:4}}>
